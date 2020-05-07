@@ -1,0 +1,58 @@
+PSIM - a portable PIC simulator
+version 0.1
+Copyright 1997, 2000 Eric L. Smith <brouhaha@users.sourceforge.net>
+$Id: README,v 1.1.1.1 2003/12/14 03:40:06 magore Exp $
+
+PSIM is free software; you can redistribute it and/or modify it under the
+terms of the GNU General Public License version 2 as published by the Free
+Software Foundation.  Note that I am not granting permission to redistribute
+or modify PSIM under the terms of any later version of the General Public
+License.
+
+This program is distributed in the hope that it will be useful (or at
+least amusing), but WITHOUT ANY WARRANTY; without even the implied warranty
+of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU General
+Public License for more details.
+
+You should have received a copy of the GNU General Public License along with
+this program (in the file "COPYING"); if not, write to the Free Software
+Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA.
+
+
+What is PSIM
+------------
+
+PSIM is a extremely simplistic simulator for the Microchip PIC16Cxx series of
+microcontrollers.  I wrote it because I was unable to find an existing
+simulator which met my needs:
+
+  Portable: I need to work under Linux on Intel and Alpha systems)
+  Extensible:  I need to simulate specialized I/O devices, such as video output
+  Reasonably fast
+  Source code publicly available
+
+
+What isn't PSIM
+---------------
+
+PSIM is *not* commercial quality software, or anywhere close.  It is a very
+early release that is only suitable for people who are willing to do some
+hacking.
+
+PSIM currently doesn't simulate much in the way of I/O.  It mainly simulates
+the CPU core.  However, there is optional code that simulates a not-quite-NTSC
+video output.
+
+Note that PSIM was just a quick hack, and although I'd like to make a lot
+of improvements to it, there is no guarantee that I actually will.  However,
+I'd be delighted to integrate any improvements that you make.
+
+Although the PSIM code is believed to be reasonably portable, I haven't
+actually tried to build it under DOS, Windows, etc.
+
+
+Performance
+-----------
+
+The non-video version of PSIM can simulate 950,000 instruction cycles per
+second on a Pentium Pro 150 (i.e., almost as fast as a 4 MHz PIC).

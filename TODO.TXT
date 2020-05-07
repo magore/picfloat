@@ -1,0 +1,39 @@
+13 Dec 2003 MIke Gore
+
+Set tabs to 4 to view these documents
+
+- Better Documentation
+	Note: see program mkdocs
+	All entry point labels have has a ':' and all MACRO have
+    a preceding line has a comment so mkdocs can extract these into a file
+
+- Fix spelling
+
+- Verify that all of the MACRO names follow a consistent naming convention
+
+- Consider adding banking code for large projects
+ 	Note: the original code was planned to be non-banked with high level 
+    function such as trig,log,io functions emulated from EEPROM - banking
+	added overhead to the size of the core functions
+
+- Add more support for index register and simulated stack memory access 
+	Note: original core code was targeted to non index Register processors 
+    Use of index register has been limited to memory move and table load 
+    functions so far 
+	- Consider adding index register for unary functions (INDF)
+	- Consider adding simulated stack for floating point objects
+
+- Do more testing of all functions in fpfn.asm
+	I.E. Using random operands as compared against the host using PSIM 
+	See tests directory for more details
+
+- Finish testing ATOF for more cases	- improve ram usage
+- Finish testing ATOI for more cases	- improve ram usage
+
+- Add Math Functions
+	(All very trivial to do)
+	LOG10(X)
+	POW10(X)
+	SINH(x)
+	COSH(x)
+	TANH(x)

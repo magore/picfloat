@@ -1,0 +1,57 @@
+#!/bin/bash
+#
+# Dec 2003 Mike gore
+#
+
+if (($# != 1))
+then
+echo Usage $0 document_file
+echo	- Can be used as a starting point for code documentation
+echo 	- Processes all .asm and .h files 
+echo 	  for function entry points and MACRO comments
+
+exit 1
+fi
+
+DOCS=$1
+rm -f $DOCS
+echo ======================================================== >>"$DOCS"
+echo This is an Automatically generated file >>"$DOCS"
+echo Created on `date` >>"$DOCS"
+echo ======================================================== >>"$DOCS"
+
+# Process ASM files
+for i in *\.asm
+do
+  if [ -f $i ]
+  then
+	  if [ $i = $0 ]
+          then
+		echo Skipping: $0
+	  else
+		echo ======================================================== >>"$DOCS"
+		echo File: $i >>"$DOCS"
+		grep -e '^[A-Za-z0-9_]*:' $i >>"$DOCS"
+	  fi
+  else
+	  echo Ignoring Directory: $i
+  fi
+done
+
+# Process H files
+for i in *\.h
+do
+  if [ -f $i ]
+  then
+	  if [ $i = $0 ]
+          then
+		echo Skipping: $0
+	  else
+		echo ======================================================== >>"$DOCS"
+		echo File: $i >>"$DOCS"
+		grep -B 1 -h MACRO $i >>"$DOCS"
+	  fi
+  else
+	  echo Ignoring Directory: $i
+  fi
+done

@@ -1,0 +1,35 @@
+Mike Gore, 29 July 2004
+
+PICFLOAT: http://picfloat.sourceforge.net , by Mike Gore
+
+Assumptions:
+	This project was developed on Linux with the GPUTILS,GCC and developer 
+	tools installed.
+	Windows users can use CYGWIN with GPUTILS, GCC and developer tools
+	installed.
+	I used gpasm-0.11.8 alpha from CVS dated after DEC3rd from GPUTILS
+
+See: 
+	CYGWIN:	 http://cygwin.com/
+	GPUTILS: http://gputils.sourceforge.net , Craig Franklin and Scott Dattalo
+
+Notes:
+	The floating point code itself is written in assembly code and uses gpasm 
+	from the GPUTILS tools set. The test suite based on PARANOIA and PSIM, 
+	which verifies,  correct operation, is written in C, as are the conversion 
+	routines, and uses the  GCC tool chain to compile. Included is a modified 
+	copy of the pic simulator PSIM and PARANOIA.
+
+See: (originals)
+	PSIM:     http://sourceforge.net/projects/psim , by Eric Smith
+	PARANOIA: http://www.moshier.net , by Steve Moshier
+
+
+Compiling:
+
+	To compile build the project run "make all" at the shell prompt
+	(make is part of the developer tools)
+
+See also: README.TXT in directory tests
+
+Resulting file is 2K of code

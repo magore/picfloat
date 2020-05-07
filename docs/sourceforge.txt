@@ -1,0 +1,88 @@
+Initial Sourceforge Project Discription for peculate , Mike Gore Dec 7, 2003
+
+Title: Floating point library for PIC micro controllers
+Language Used: Assembler (utilities for creating floating point numbers are in C)
+Tools Needed: GPASM or MPASM
+License: BSD
+Main features: 
+ - small size - fits in 2K code
+ - heavy use of macros (over 300) makes code readable and portable
+ - only assume one 8bit register called W (easy to change) - and an index register
+ - testing is done  with paranoia math test suite - see notes
+
+Test of core math function:
+ I have run this code against the PARANOIA test suite by Steve Moshier . I have supplied a patch to version 0.4 of PSIM PIC emulator by Eric L. Smith so I could simulate the math library against the host system running paranoia. I supply C stub functions that use the simulator to invoke execute the PIC math functions and return the results back.
+
+Results of paranoia (so far) - flaws and defects due to chopping mode only:
+The results so far are The number of SERIOUS DEFECTs discovered = 1.
+The number of DEFECTs discovered =	2.
+The number of FLAWs discovered = 2. 
+
+Example testing of SIN Trig function using PIC simulator on host system
+See ../tests/baseline for all results - note cycle count
+
+SIN(-3.0000000000)==-5.23359562e-02, Abserr: -2.17302634e-11, RelBits=PERFECT
+cycles:    21823, Stack depth:5
+SIN(-2.0000000000)==-3.48994967e-02, Abserr: +3.70165704e-12, RelBits=PERFECT
+cycles:    22059, Stack depth:5
+SIN(-1.0000000000)==-1.74524064e-02, Abserr: -2.24275459e-12, RelBits=PERFECT
+cycles:    22143, Stack depth:5
+SIN(0.0000000000)==+0.00000000e+00, Abserr: +0.00000000e+00, RelBits=PERFECT
+cycles:     3611, Stack depth:4
+SIN(1.0000000000)==+1.74524064e-02, Abserr: +2.24275459e-12, RelBits=PERFECT
+cycles:    22142, Stack depth:5
+(Trimmed for space)
+
+
+Built-in Trig assembler code sample Listing
+Notes: The code takes angle in RADS and then computes:
+	SIN and ASIN of the SIN result
+	COS and ACOS of the COS result
+	TAN and ATAN of the TAN result
+
+trimed for space... Note accuracy!
+RADS:                      1.51843644E+00
+SIN: 9.98629534E-01, ASIN: 1.51843644E+00
+COS: 5.23359574E-02, ACOS: 1.51843644E+00
+TAN: 1.90811374E+01, ATAN: 1.51843645E+00
+
+RADS:                      1.53588974E+00
+SIN: 9.99390826E-01, ASIN: 1.53588973E+00
+COS: 3.48994968E-02, ACOS: 1.53588974E+00
+TAN: 2.86362550E+01, ATAN: 1.53588974E+00
+
+RADS:                      1.55334303E+00
+SIN: 9.99847695E-01, ASIN: 1.55334302E+00
+COS: 1.74524068E-02, ACOS: 1.55334303E+00
+TAN: 5.72899640E+01, ATAN: 1.55334303E+00
+
+RADS:                      1.57079632E+00
+SIN: 1.00000000E+00, ASIN: 1.57079632E+00
+COS: 7.31459038E-10, ACOS: 1.57079632E+00
+TAN: 1.36713065E+09, ATAN: 1.57079632E+00
+
+
+
+Short example code section:
+EXAMPLE CODE:
+; =====================================================
+;_POLY_FParg1
+;
+; Call TABLE_SET_BASE first!
+;
+; P += *table_ptr
+; P *= FParg1
+;
+; FParg = *table_ptr; Constant
+; FPac += FParg		; P += Constant
+; FPac *= FParg1	; P *= FParg1
+;
+_POLY_FParg1
+	TABLE_LD	; FParg = Constant
+	FP_ADD		; P += Constant
+	TRarg_LOAD	FParg1	; FParg = FParg1
+	FP_MUL		; P *= FParg1
+	ENDSUB 
+Summary of function included  (Not including MACROs)
+See headers.txt
+

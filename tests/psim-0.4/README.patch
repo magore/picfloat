@@ -1,0 +1,9 @@
+2002,2003 Mike Gore
+
+The file psim.patch patches the original psim-0.4 to allow its
+core functions to be placed in a library so they could be compiled into
+user programs. Additinal code was added so users program could "call" pic
+functions in the simulator - this permits complex testing in a host
+enviornment that would not be possible othersie
+
+For the orginal code consult http://sourceforge.net/projects/psim

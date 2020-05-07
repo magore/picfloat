@@ -1,0 +1,769 @@
+base:2.0,pow:128.0=result:3.402823669e+38
+	cycles:    17601, Stack depth:4
+	EXP(LOG(result))=+0.00000000e+00,-3.40282367e+38, BITS=+0.00
+base:2.0,pow:127.0=result:1.701411835e+38
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+8.50705917e+37,-8.50705917e+37, BITS=+1.00
+base:2.0,pow:126.0=result:8.507059173e+37
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+8.50705880e+37,-3.68410956e+30, BITS=+24.46 PERFECT
+base:2.0,pow:125.0=result:4.253529587e+37
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+4.25352940e+37,-1.84205478e+30, BITS=+24.46 PERFECT
+base:2.0,pow:124.0=result:2.126764793e+37
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+2.12676470e+37,-9.21027389e+29, BITS=+24.46 PERFECT
+base:2.0,pow:123.0=result:1.063382397e+37
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+1.06338235e+37,-4.60513695e+29, BITS=+24.46 PERFECT
+base:2.0,pow:122.0=result:5.316911983e+36
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+5.31691175e+36,-2.30256847e+29, BITS=+24.46 PERFECT
+base:2.0,pow:121.0=result:2.658455992e+36
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+2.65845588e+36,-1.15128424e+29, BITS=+24.46 PERFECT
+base:2.0,pow:120.0=result:1.329227996e+36
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+1.32922794e+36,-5.75642118e+28, BITS=+24.46 PERFECT
+base:2.0,pow:119.0=result:6.646139979e+35
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+6.64613969e+35,-2.87821059e+28, BITS=+24.46 PERFECT
+base:2.0,pow:118.0=result:3.323069989e+35
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+3.32306985e+35,-1.43910530e+28, BITS=+24.46 PERFECT
+base:2.0,pow:117.0=result:1.661534995e+35
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.66153492e+35,-7.19552648e+27, BITS=+24.46 PERFECT
+base:2.0,pow:116.0=result:8.307674974e+34
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+8.30767461e+34,-3.59776324e+27, BITS=+24.46 PERFECT
+base:2.0,pow:115.0=result:4.153837487e+34
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+4.15383731e+34,-1.79888162e+27, BITS=+24.46 PERFECT
+base:2.0,pow:114.0=result:2.076918743e+34
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+2.07691865e+34,-8.99440810e+26, BITS=+24.46 PERFECT
+base:2.0,pow:113.0=result:1.038459372e+34
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+1.03845933e+34,-4.49720405e+26, BITS=+24.46 PERFECT
+base:2.0,pow:112.0=result:5.192296859e+33
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+5.19229663e+33,-2.24860202e+26, BITS=+24.46 PERFECT
+base:2.0,pow:111.0=result:2.596148429e+33
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+2.59614832e+33,-1.12430101e+26, BITS=+24.46 PERFECT
+base:2.0,pow:110.0=result:1.298074215e+33
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+1.29807416e+33,-5.62150506e+25, BITS=+24.46 PERFECT
+base:2.0,pow:109.0=result:6.490371073e+32
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+6.49037079e+32,-2.81075253e+25, BITS=+24.46 PERFECT
+base:2.0,pow:108.0=result:3.245185537e+32
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+3.24518540e+32,-1.40537627e+25, BITS=+24.46 PERFECT
+base:2.0,pow:107.0=result:1.622592768e+32
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.62259277e+32,+3.02231455e+23, BITS=+29.00 PERFECT
+base:2.0,pow:106.0=result:8.112963841e+31
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+8.11296386e+31,+1.51115727e+23, BITS=+29.00 PERFECT
+base:2.0,pow:105.0=result:4.056481921e+31
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+4.05648193e+31,+7.55578637e+22, BITS=+29.00 PERFECT
+base:2.0,pow:104.0=result:2.028240960e+31
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+2.02824096e+31,+3.77789319e+22, BITS=+29.00 PERFECT
+base:2.0,pow:103.0=result:1.014120480e+31
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.01412048e+31,+1.88894659e+22, BITS=+29.00 PERFECT
+base:2.0,pow:102.0=result:5.070602401e+30
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+5.07060241e+30,+9.44473297e+21, BITS=+29.00 PERFECT
+base:2.0,pow:101.0=result:2.535301200e+30
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+2.53530121e+30,+4.72236648e+21, BITS=+29.00 PERFECT
+base:2.0,pow:100.0=result:1.267650600e+30
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.26765060e+30,+2.36118324e+21, BITS=+29.00 PERFECT
+base:2.0,pow:99.0=result:6.338253001e+29
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+6.33825301e+29,+1.18059162e+21, BITS=+29.00 PERFECT
+base:2.0,pow:98.0=result:3.169126501e+29
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+3.16912651e+29,+5.90295810e+20, BITS=+29.00 PERFECT
+base:2.0,pow:97.0=result:1.584563250e+29
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+1.58456325e+29,+2.95147905e+20, BITS=+29.00 PERFECT
+base:2.0,pow:96.0=result:7.922816251e+28
+	cycles:    16568, Stack depth:4
+	EXP(LOG(result))=+7.92281627e+28,+1.47573953e+20, BITS=+29.00 PERFECT
+base:2.0,pow:95.0=result:3.961408126e+28
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+3.96140795e+28,-1.71554720e+21, BITS=+24.46 PERFECT
+base:2.0,pow:94.0=result:1.980704063e+28
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+1.98070398e+28,-8.57773599e+20, BITS=+24.46 PERFECT
+base:2.0,pow:93.0=result:9.903520314e+27
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+9.90351989e+27,-4.28886800e+20, BITS=+24.46 PERFECT
+base:2.0,pow:92.0=result:4.951760157e+27
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+4.95176005e+27,-1.11833386e+20, BITS=+25.40 PERFECT
+base:2.0,pow:91.0=result:2.475880079e+27
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+2.47588008e+27,+4.61168602e+18, BITS=+29.00 PERFECT
+base:2.0,pow:90.0=result:1.237940039e+27
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.23794004e+27,+2.30584301e+18, BITS=+29.00 PERFECT
+base:2.0,pow:89.0=result:6.189700196e+26
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+6.18970021e+26,+1.15292150e+18, BITS=+29.00 PERFECT
+base:2.0,pow:88.0=result:3.094850098e+26
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+3.09485010e+26,+5.76460752e+17, BITS=+29.00 PERFECT
+base:2.0,pow:87.0=result:1.547425049e+26
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.54742505e+26,+2.88230376e+17, BITS=+29.00 PERFECT
+base:2.0,pow:86.0=result:7.737125246e+25
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+7.73712526e+25,+1.44115188e+17, BITS=+29.00 PERFECT
+base:2.0,pow:85.0=result:3.868562623e+25
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+3.86856263e+25,+7.20575940e+16, BITS=+29.00 PERFECT
+base:2.0,pow:84.0=result:1.934281311e+25
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+1.93428131e+25,+3.60287970e+16, BITS=+29.00 PERFECT
+base:2.0,pow:83.0=result:9.671406557e+24
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+9.67140657e+24,+1.80143985e+16, BITS=+29.00 PERFECT
+base:2.0,pow:82.0=result:4.835703278e+24
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+4.83570329e+24,+9.00719925e+15, BITS=+29.00 PERFECT
+base:2.0,pow:81.0=result:2.417851639e+24
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+2.41785164e+24,+4.50359963e+15, BITS=+29.00 PERFECT
+base:2.0,pow:80.0=result:1.208925820e+24
+	cycles:    15491, Stack depth:4
+	EXP(LOG(result))=+1.20892582e+24,+2.25179981e+15, BITS=+29.00 PERFECT
+base:2.0,pow:79.0=result:6.044629098e+23
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+6.04462896e+23,-1.36515364e+16, BITS=+25.40 PERFECT
+base:2.0,pow:78.0=result:3.022314549e+23
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+3.02231448e+23,-6.82576819e+15, BITS=+25.40 PERFECT
+base:2.0,pow:77.0=result:1.511157275e+23
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+1.51115724e+23,-3.41288409e+15, BITS=+25.40 PERFECT
+base:2.0,pow:76.0=result:7.555786373e+22
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+7.55578620e+22,-1.70644205e+15, BITS=+25.40 PERFECT
+base:2.0,pow:75.0=result:3.777893186e+22
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+3.77789319e+22,+7.03687442e+13, BITS=+29.00 PERFECT
+base:2.0,pow:74.0=result:1.888946593e+22
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+1.88894660e+22,+3.51843721e+13, BITS=+29.00 PERFECT
+base:2.0,pow:73.0=result:9.444732966e+21
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+9.44473298e+21,+1.75921860e+13, BITS=+29.00 PERFECT
+base:2.0,pow:72.0=result:4.722366483e+21
+	cycles:    14414, Stack depth:4
+	EXP(LOG(result))=+4.72236649e+21,+8.79609302e+12, BITS=+29.00 PERFECT
+base:2.0,pow:71.0=result:2.361183241e+21
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+2.36118325e+21,+4.39804651e+12, BITS=+29.00 PERFECT
+base:2.0,pow:70.0=result:1.180591621e+21
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+1.18059162e+21,+2.19902326e+12, BITS=+29.00 PERFECT
+base:2.0,pow:69.0=result:5.902958104e+20
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+5.90295811e+20,+1.09951163e+12, BITS=+29.00 PERFECT
+base:2.0,pow:68.0=result:2.951479052e+20
+	cycles:    13337, Stack depth:4
+	EXP(LOG(result))=+2.95147906e+20,+5.49755814e+11, BITS=+29.00 PERFECT
+base:2.0,pow:67.0=result:1.475739526e+20
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+1.47573953e+20,+2.74877907e+11, BITS=+29.00 PERFECT
+base:2.0,pow:66.0=result:7.378697629e+19
+	cycles:    12260, Stack depth:4
+	EXP(LOG(result))=+7.37869764e+19,+1.37438953e+11, BITS=+29.00 PERFECT
+base:2.0,pow:65.0=result:3.689348815e+19
+	cycles:    11183, Stack depth:4
+	EXP(LOG(result))=+3.68934882e+19,+6.87194767e+10, BITS=+29.00 PERFECT
+base:2.0,pow:64.0=result:1.844674407e+19
+	cycles:    15261, Stack depth:4
+	EXP(LOG(result))=+1.84467441e+19,+3.43597384e+10, BITS=+29.00 PERFECT
+base:2.0,pow:63.0=result:9.223372037e+18
+	cycles:    14228, Stack depth:4
+	EXP(LOG(result))=+9.22337183e+18,-2.08305914e+11, BITS=+25.40 PERFECT
+base:2.0,pow:62.0=result:4.611686018e+18
+	cycles:    14228, Stack depth:4
+	EXP(LOG(result))=+4.61168591e+18,-1.04152957e+11, BITS=+25.40 PERFECT
+base:2.0,pow:61.0=result:2.305843009e+18
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+2.30584296e+18,-5.20764785e+10, BITS=+25.40 PERFECT
+base:2.0,pow:60.0=result:1.152921505e+18
+	cycles:    14228, Stack depth:4
+	EXP(LOG(result))=+1.15292148e+18,-2.60382392e+10, BITS=+25.40 PERFECT
+base:2.0,pow:59.0=result:5.764607523e+17
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+5.76460739e+17,-1.30191196e+10, BITS=+25.40 PERFECT
+base:2.0,pow:58.0=result:2.882303762e+17
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+2.88230370e+17,-6.50955981e+09, BITS=+25.40 PERFECT
+base:2.0,pow:57.0=result:1.441151881e+17
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+1.44115185e+17,-3.25477990e+09, BITS=+25.40 PERFECT
+base:2.0,pow:56.0=result:7.205759404e+16
+	cycles:    14228, Stack depth:4
+	EXP(LOG(result))=+7.20575924e+16,-1.62738995e+09, BITS=+25.40 PERFECT
+base:2.0,pow:55.0=result:3.602879702e+16
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+3.60287962e+16,-8.13694976e+08, BITS=+25.40 PERFECT
+base:2.0,pow:54.0=result:1.801439851e+16
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+1.80143981e+16,-4.06847488e+08, BITS=+25.40 PERFECT
+base:2.0,pow:53.0=result:9.007199255e+15
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+9.00719927e+15,+1.67772160e+07, BITS=+29.00 PERFECT
+base:2.0,pow:52.0=result:4.503599627e+15
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+4.50359964e+15,+8.38860800e+06, BITS=+29.00 PERFECT
+base:2.0,pow:51.0=result:2.251799814e+15
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+2.25179982e+15,+4.19430400e+06, BITS=+29.00 PERFECT
+base:2.0,pow:50.0=result:1.125899907e+15
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+1.12589991e+15,+2.09715200e+06, BITS=+29.00 PERFECT
+base:2.0,pow:49.0=result:5.629499534e+14
+	cycles:    10997, Stack depth:4
+	EXP(LOG(result))=+5.62949954e+14,+1.04857600e+06, BITS=+29.00 PERFECT
+base:2.0,pow:48.0=result:2.814749767e+14
+	cycles:    14228, Stack depth:4
+	EXP(LOG(result))=+2.81474977e+14,+5.24288000e+05, BITS=+29.00 PERFECT
+base:2.0,pow:47.0=result:1.407374884e+14
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+1.40737485e+14,-3.17849600e+06, BITS=+25.40 PERFECT
+base:2.0,pow:46.0=result:7.036874418e+13
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+7.03687433e+13,-8.68352000e+05, BITS=+26.27 PERFECT
+base:2.0,pow:45.0=result:3.518437209e+13
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+3.51843722e+13,+6.55360000e+04, BITS=+29.00 PERFECT
+base:2.0,pow:44.0=result:1.759218604e+13
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+1.75921861e+13,+3.27680000e+04, BITS=+29.00 PERFECT
+base:2.0,pow:43.0=result:8.796093022e+12
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+8.79609304e+12,+1.63840000e+04, BITS=+29.00 PERFECT
+base:2.0,pow:42.0=result:4.398046511e+12
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+4.39804652e+12,+8.19200000e+03, BITS=+29.00 PERFECT
+base:2.0,pow:41.0=result:2.199023256e+12
+	cycles:    10997, Stack depth:4
+	EXP(LOG(result))=+2.19902326e+12,+4.09600000e+03, BITS=+29.00 PERFECT
+base:2.0,pow:40.0=result:1.099511628e+12
+	cycles:    13151, Stack depth:4
+	EXP(LOG(result))=+1.09951163e+12,+2.04800000e+03, BITS=+29.00 PERFECT
+base:2.0,pow:39.0=result:5.497558139e+11
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+5.49755807e+11,-6.78400000e+03, BITS=+26.27 PERFECT
+base:2.0,pow:38.0=result:2.748779069e+11
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+2.74877904e+11,-3.39200000e+03, BITS=+26.27 PERFECT
+base:2.0,pow:37.0=result:1.374389535e+11
+	cycles:    10997, Stack depth:4
+	EXP(LOG(result))=+1.37438954e+11,+2.56000000e+02, BITS=+29.00 PERFECT
+base:2.0,pow:36.0=result:6.871947674e+10
+	cycles:    12074, Stack depth:4
+	EXP(LOG(result))=+6.87194769e+10,+1.28000000e+02, BITS=+29.00 PERFECT
+base:2.0,pow:35.0=result:3.435973837e+10
+	cycles:    10997, Stack depth:4
+	EXP(LOG(result))=+3.43597384e+10,+6.40000000e+01, BITS=+29.00 PERFECT
+base:2.0,pow:34.0=result:1.717986918e+10
+	cycles:    10997, Stack depth:4
+	EXP(LOG(result))=+1.71798692e+10,+3.20000000e+01, BITS=+29.00 PERFECT
+base:2.0,pow:33.0=result:8.589934592e+09
+	cycles:     9920, Stack depth:4
+	EXP(LOG(result))=+8.58993461e+09,+1.60000000e+01, BITS=+29.00 PERFECT
+base:2.0,pow:32.0=result:4.294967296e+09
+	cycles:    12921, Stack depth:4
+	EXP(LOG(result))=+4.29496730e+09,+8.00000000e+00, BITS=+29.00 PERFECT
+base:2.0,pow:31.0=result:2.147483648e+09
+	cycles:    11888, Stack depth:4
+	EXP(LOG(result))=+2.14748362e+09,-2.65000000e+01, BITS=+26.27 PERFECT
+base:2.0,pow:30.0=result:1.073741824e+09
+	cycles:    11888, Stack depth:4
+	EXP(LOG(result))=+1.07374181e+09,-1.32500000e+01, BITS=+26.27 PERFECT
+base:2.0,pow:29.0=result:5.368709120e+08
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+5.36870905e+08,-6.62500000e+00, BITS=+26.27 PERFECT
+base:2.0,pow:28.0=result:2.684354560e+08
+	cycles:    11888, Stack depth:4
+	EXP(LOG(result))=+2.68435453e+08,-3.31250000e+00, BITS=+26.27 PERFECT
+base:2.0,pow:27.0=result:1.342177280e+08
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+1.34217726e+08,-1.65625000e+00, BITS=+26.27 PERFECT
+base:2.0,pow:26.0=result:6.710886400e+07
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+6.71088641e+07,+1.25000000e-01, BITS=+29.00 PERFECT
+base:2.0,pow:25.0=result:3.355443200e+07
+	cycles:     9734, Stack depth:4
+	EXP(LOG(result))=+3.35544321e+07,+6.25000000e-02, BITS=+29.00 PERFECT
+base:2.0,pow:24.0=result:1.677721600e+07
+	cycles:    11888, Stack depth:4
+	EXP(LOG(result))=+1.67772160e+07,+3.12500000e-02, BITS=+29.00 PERFECT
+base:2.0,pow:23.0=result:8.388608000e+06
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+8.38860794e+06,-6.05468750e-02, BITS=+27.05 PERFECT
+base:2.0,pow:22.0=result:4.194304000e+06
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+4.19430401e+06,+7.81250000e-03, BITS=+29.00 PERFECT
+base:2.0,pow:21.0=result:2.097152000e+06
+	cycles:     9734, Stack depth:4
+	EXP(LOG(result))=+2.09715200e+06,+3.90625000e-03, BITS=+29.00 PERFECT
+base:2.0,pow:20.0=result:1.048576000e+06
+	cycles:    10811, Stack depth:4
+	EXP(LOG(result))=+1.04857600e+06,+1.95312500e-03, BITS=+29.00 PERFECT
+base:2.0,pow:19.0=result:5.242880000e+05
+	cycles:     9734, Stack depth:4
+	EXP(LOG(result))=+5.24287996e+05,-3.78417969e-03, BITS=+27.05 PERFECT
+base:2.0,pow:18.0=result:2.621440000e+05
+	cycles:     9734, Stack depth:4
+	EXP(LOG(result))=+2.62144000e+05,+4.88281250e-04, BITS=+29.00 PERFECT
+base:2.0,pow:17.0=result:1.310720000e+05
+	cycles:     8657, Stack depth:4
+	EXP(LOG(result))=+1.31072000e+05,+2.44140625e-04, BITS=+29.00 PERFECT
+base:2.0,pow:16.0=result:6.553600000e+04
+	cycles:    10581, Stack depth:4
+	EXP(LOG(result))=+6.55360001e+04,+1.22070312e-04, BITS=+29.00 PERFECT
+base:2.0,pow:15.0=result:3.276800000e+04
+	cycles:     9548, Stack depth:4
+	EXP(LOG(result))=+3.27679998e+04,-2.36511230e-04, BITS=+27.05 PERFECT
+base:2.0,pow:14.0=result:1.638400000e+04
+	cycles:     9548, Stack depth:4
+	EXP(LOG(result))=+1.63839999e+04,-1.18255615e-04, BITS=+27.05 PERFECT
+base:2.0,pow:13.0=result:8.192000000e+03
+	cycles:     8471, Stack depth:4
+	EXP(LOG(result))=+8.19200002e+03,+1.52587891e-05, BITS=+29.00 PERFECT
+base:2.0,pow:12.0=result:4.096000000e+03
+	cycles:     9548, Stack depth:4
+	EXP(LOG(result))=+4.09600001e+03,+7.62939453e-06, BITS=+29.00 PERFECT
+base:2.0,pow:11.0=result:2.048000000e+03
+	cycles:     8471, Stack depth:4
+	EXP(LOG(result))=+2.04800000e+03,+3.81469727e-06, BITS=+29.00 PERFECT
+base:2.0,pow:10.0=result:1.024000000e+03
+	cycles:     8471, Stack depth:4
+	EXP(LOG(result))=+1.02400000e+03,+1.90734863e-06, BITS=+29.00 PERFECT
+base:2.0,pow:9.0=result:5.120000000e+02
+	cycles:     7394, Stack depth:4
+	EXP(LOG(result))=+5.12000001e+02,+9.53674316e-07, BITS=+29.00 PERFECT
+base:2.0,pow:8.0=result:2.560000000e+02
+	cycles:     8241, Stack depth:4
+	EXP(LOG(result))=+2.56000000e+02,+4.76837158e-07, BITS=+29.00 PERFECT
+base:2.0,pow:7.0=result:1.280000000e+02
+	cycles:     7208, Stack depth:4
+	EXP(LOG(result))=+1.28000000e+02,+2.38418579e-07, BITS=+29.00 PERFECT
+base:2.0,pow:6.0=result:6.400000000e+01
+	cycles:     7208, Stack depth:4
+	EXP(LOG(result))=+6.40000001e+01,+1.19209290e-07, BITS=+29.00 PERFECT
+base:2.0,pow:5.0=result:3.200000000e+01
+	cycles:     6131, Stack depth:4
+	EXP(LOG(result))=+3.20000001e+01,+5.96046448e-08, BITS=+29.00 PERFECT
+base:2.0,pow:4.0=result:1.600000000e+01
+	cycles:     5901, Stack depth:4
+	EXP(LOG(result))=+1.60000000e+01,+2.98023224e-08, BITS=+29.00 PERFECT
+base:2.0,pow:3.0=result:8.000000000e+00
+	cycles:     4868, Stack depth:4
+	EXP(LOG(result))=+8.00000001e+00,+1.49011612e-08, BITS=+29.00 PERFECT
+base:2.0,pow:2.0=result:4.000000000e+00
+	cycles:     3561, Stack depth:4
+	EXP(LOG(result))=+4.00000001e+00,+7.45058060e-09, BITS=+29.00 PERFECT
+base:2.0,pow:1.0=result:2.000000000e+00
+	cycles:     2375, Stack depth:4
+	EXP(LOG(result))=+2.00000000e+00,+3.72529030e-09, BITS=+29.00 PERFECT
+base:2.0,pow:0.0=result:1.000000000e+00
+	cycles:       52, Stack depth:2
+	EXP(LOG(result))=+1.00000000e+00,+1.86264515e-09, BITS=+29.00 PERFECT
+base:2.0,pow:-1.0=result:5.000000000e-01
+	cycles:     3765, Stack depth:4
+	EXP(LOG(result))=+5.00000001e-01,+1.39698386e-09, BITS=+28.42 PERFECT
+base:2.0,pow:-2.0=result:2.500000000e-01
+	cycles:     4951, Stack depth:4
+	EXP(LOG(result))=+2.50000001e-01,+6.98491931e-10, BITS=+28.42 PERFECT
+base:2.0,pow:-3.0=result:1.250000000e-01
+	cycles:     6258, Stack depth:4
+	EXP(LOG(result))=+1.25000001e-01,+5.82076609e-10, BITS=+27.68 PERFECT
+base:2.0,pow:-4.0=result:6.250000000e-02
+	cycles:     7291, Stack depth:4
+	EXP(LOG(result))=+6.25000003e-02,+2.91038305e-10, BITS=+27.68 PERFECT
+base:2.0,pow:-5.0=result:3.125000000e-02
+	cycles:     7521, Stack depth:4
+	EXP(LOG(result))=+3.12500001e-02,+1.45519152e-10, BITS=+27.68 PERFECT
+base:2.0,pow:-6.0=result:1.562500000e-02
+	cycles:     8598, Stack depth:4
+	EXP(LOG(result))=+1.56250001e-02,+1.16415322e-10, BITS=+27.00 PERFECT
+base:2.0,pow:-7.0=result:7.812500000e-03
+	cycles:     8598, Stack depth:4
+	EXP(LOG(result))=+7.81250004e-03,+3.63797881e-11, BITS=+27.68 PERFECT
+base:2.0,pow:-8.0=result:3.906250000e-03
+	cycles:     9631, Stack depth:4
+	EXP(LOG(result))=+3.90625003e-03,+2.91038305e-11, BITS=+27.00 PERFECT
+base:2.0,pow:-9.0=result:1.953125000e-03
+	cycles:     8784, Stack depth:4
+	EXP(LOG(result))=+1.95312502e-03,+1.81898940e-11, BITS=+26.68 PERFECT
+base:2.0,pow:-10.0=result:9.765625000e-04
+	cycles:     9861, Stack depth:4
+	EXP(LOG(result))=+9.76562507e-04,+7.27595761e-12, BITS=+27.00 PERFECT
+base:2.0,pow:-11.0=result:4.882812500e-04
+	cycles:     9861, Stack depth:4
+	EXP(LOG(result))=+4.88281255e-04,+4.54747351e-12, BITS=+26.68 PERFECT
+base:2.0,pow:-12.0=result:2.441406250e-04
+	cycles:    10938, Stack depth:4
+	EXP(LOG(result))=+2.44140628e-04,+2.95585778e-12, BITS=+26.30 PERFECT
+base:2.0,pow:-13.0=result:1.220703125e-04
+	cycles:     9861, Stack depth:4
+	EXP(LOG(result))=+1.22070314e-04,+1.47792889e-12, BITS=+26.30 PERFECT
+base:2.0,pow:-14.0=result:6.103515625e-05
+	cycles:    10938, Stack depth:4
+	EXP(LOG(result))=+6.10351567e-05,+4.54747351e-13, BITS=+27.00 PERFECT
+base:2.0,pow:-15.0=result:3.051757812e-05
+	cycles:    10938, Stack depth:4
+	EXP(LOG(result))=+3.05175785e-05,+3.69482223e-13, BITS=+26.30 PERFECT
+base:2.0,pow:-16.0=result:1.525878906e-05
+	cycles:    11971, Stack depth:4
+	EXP(LOG(result))=+1.52587892e-05,+1.84741111e-13, BITS=+26.30 PERFECT
+base:2.0,pow:-17.0=result:7.629394531e-06
+	cycles:    10047, Stack depth:4
+	EXP(LOG(result))=+7.62939462e-06,+9.23705556e-14, BITS=+26.30 PERFECT
+base:2.0,pow:-18.0=result:3.814697266e-06
+	cycles:    11124, Stack depth:4
+	EXP(LOG(result))=+3.81469733e-06,+6.75015599e-14, BITS=+25.75 PERFECT
+base:2.0,pow:-19.0=result:1.907348633e-06
+	cycles:    11124, Stack depth:4
+	EXP(LOG(result))=+1.90734866e-06,+2.30926389e-14, BITS=+26.30 PERFECT
+base:2.0,pow:-20.0=result:9.536743164e-07
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+9.53674328e-07,+1.15463195e-14, BITS=+26.30 PERFECT
+base:2.0,pow:-21.0=result:4.768371582e-07
+	cycles:    11124, Stack depth:4
+	EXP(LOG(result))=+4.76837164e-07,+5.77315973e-15, BITS=+26.30 PERFECT
+base:2.0,pow:-22.0=result:2.384185791e-07
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+2.38418583e-07,+4.21884749e-15, BITS=+25.75 PERFECT
+base:2.0,pow:-23.0=result:1.192092896e-07
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+1.19209291e-07,+1.44328993e-15, BITS=+26.30 PERFECT
+base:2.0,pow:-24.0=result:5.960464478e-08
+	cycles:    13278, Stack depth:4
+	EXP(LOG(result))=+5.96046461e-08,+1.33226763e-15, BITS=+25.42 PERFECT
+base:2.0,pow:-25.0=result:2.980232239e-08
+	cycles:    11124, Stack depth:4
+	EXP(LOG(result))=+2.98023231e-08,+6.66133815e-16, BITS=+25.42 PERFECT
+base:2.0,pow:-26.0=result:1.490116119e-08
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+1.49011615e-08,+3.33066907e-16, BITS=+25.42 PERFECT
+base:2.0,pow:-27.0=result:7.450580597e-09
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+7.45058069e-09,+9.02056208e-17, BITS=+26.30 PERFECT
+base:2.0,pow:-28.0=result:3.725290298e-09
+	cycles:    13278, Stack depth:4
+	EXP(LOG(result))=+3.72529034e-09,+4.51028104e-17, BITS=+26.30 PERFECT
+base:2.0,pow:-29.0=result:1.862645149e-09
+	cycles:    12201, Stack depth:4
+	EXP(LOG(result))=+1.86264517e-09,+2.25514052e-17, BITS=+26.30 PERFECT
+base:2.0,pow:-30.0=result:9.313225746e-10
+	cycles:    13278, Stack depth:4
+	EXP(LOG(result))=+9.31322595e-10,+2.08166817e-17, BITS=+25.42 PERFECT
+base:2.0,pow:-31.0=result:4.656612873e-10
+	cycles:    13278, Stack depth:4
+	EXP(LOG(result))=+4.65661298e-10,+1.04083409e-17, BITS=+25.42 PERFECT
+base:2.0,pow:-32.0=result:2.328306437e-10
+	cycles:    14311, Stack depth:4
+	EXP(LOG(result))=+2.32830649e-10,+5.20417043e-18, BITS=+25.42 PERFECT
+base:2.0,pow:-33.0=result:1.164153218e-10
+	cycles:    11310, Stack depth:4
+	EXP(LOG(result))=+1.16415324e-10,+2.60208521e-18, BITS=+25.42 PERFECT
+base:2.0,pow:-34.0=result:5.820766091e-11
+	cycles:    12387, Stack depth:4
+	EXP(LOG(result))=+5.82076622e-11,+1.30104261e-18, BITS=+25.42 PERFECT
+base:2.0,pow:-35.0=result:2.910383046e-11
+	cycles:    12387, Stack depth:4
+	EXP(LOG(result))=+2.91038314e-11,+9.48676901e-19, BITS=+24.87 PERFECT
+base:2.0,pow:-36.0=result:1.455191523e-11
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+1.45519157e-11,+4.74338450e-19, BITS=+24.87 PERFECT
+base:2.0,pow:-37.0=result:7.275957614e-12
+	cycles:    12387, Stack depth:4
+	EXP(LOG(result))=+7.27595778e-12,+1.62630326e-19, BITS=+25.42 PERFECT
+base:2.0,pow:-38.0=result:3.637978807e-12
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+3.63797889e-12,+8.13151629e-20, BITS=+25.42 PERFECT
+base:2.0,pow:-39.0=result:1.818989404e-12
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+1.81898944e-12,+4.06575815e-20, BITS=+25.42 PERFECT
+base:2.0,pow:-40.0=result:9.094947018e-13
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+9.09494722e-13,+2.03287907e-20, BITS=+25.42 PERFECT
+base:2.0,pow:-41.0=result:4.547473509e-13
+	cycles:    12387, Stack depth:4
+	EXP(LOG(result))=+4.54747361e-13,+1.01643954e-20, BITS=+25.42 PERFECT
+base:2.0,pow:-42.0=result:2.273736754e-13
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+2.27373681e-13,+5.08219768e-21, BITS=+25.42 PERFECT
+base:2.0,pow:-43.0=result:1.136868377e-13
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+1.13686841e-13,+3.70576914e-21, BITS=+24.87 PERFECT
+base:2.0,pow:-44.0=result:5.684341886e-14
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+5.68434207e-14,+1.85288457e-21, BITS=+24.87 PERFECT
+base:2.0,pow:-45.0=result:2.842170943e-14
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+2.84217101e-14,+6.35274710e-22, BITS=+25.42 PERFECT
+base:2.0,pow:-46.0=result:1.421085472e-14
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+1.42108550e-14,+3.17637355e-22, BITS=+25.42 PERFECT
+base:2.0,pow:-47.0=result:7.105427358e-15
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+7.10542766e-15,+3.04402465e-22, BITS=+24.48 PERFECT
+base:2.0,pow:-48.0=result:3.552713679e-15
+	cycles:    15618, Stack depth:4
+	EXP(LOG(result))=+3.55271383e-15,+1.52201233e-22, BITS=+24.48 PERFECT
+base:2.0,pow:-49.0=result:1.776356839e-15
+	cycles:    12387, Stack depth:4
+	EXP(LOG(result))=+1.77635692e-15,+7.61006164e-23, BITS=+24.48 PERFECT
+base:2.0,pow:-50.0=result:8.881784197e-16
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+8.88178458e-16,+3.80503082e-23, BITS=+24.48 PERFECT
+base:2.0,pow:-51.0=result:4.440892099e-16
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+4.44089229e-16,+1.90251541e-23, BITS=+24.48 PERFECT
+base:2.0,pow:-52.0=result:2.220446049e-16
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+2.22044614e-16,+9.51257704e-24, BITS=+24.48 PERFECT
+base:2.0,pow:-53.0=result:1.110223025e-16
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+1.11022305e-16,+2.48154184e-24, BITS=+25.42 PERFECT
+base:2.0,pow:-54.0=result:5.551115123e-17
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+5.55111525e-17,+1.24077092e-24, BITS=+25.42 PERFECT
+base:2.0,pow:-55.0=result:2.775557562e-17
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+2.77555762e-17,+6.20385459e-25, BITS=+25.42 PERFECT
+base:2.0,pow:-56.0=result:1.387778781e-17
+	cycles:    15618, Stack depth:4
+	EXP(LOG(result))=+1.38777881e-17,+3.10192730e-25, BITS=+25.42 PERFECT
+base:2.0,pow:-57.0=result:6.938893904e-18
+	cycles:    13464, Stack depth:4
+	EXP(LOG(result))=+6.93889406e-18,+1.55096365e-25, BITS=+25.42 PERFECT
+base:2.0,pow:-58.0=result:3.469446952e-18
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+3.46944703e-18,+7.75481824e-26, BITS=+25.42 PERFECT
+base:2.0,pow:-59.0=result:1.734723476e-18
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+1.73472355e-18,+7.43170082e-26, BITS=+24.48 PERFECT
+base:2.0,pow:-60.0=result:8.673617380e-19
+	cycles:    15618, Stack depth:4
+	EXP(LOG(result))=+8.67361775e-19,+3.71585041e-26, BITS=+24.48 PERFECT
+base:2.0,pow:-61.0=result:4.336808690e-19
+	cycles:    14541, Stack depth:4
+	EXP(LOG(result))=+4.33680888e-19,+1.85792520e-26, BITS=+24.48 PERFECT
+base:2.0,pow:-62.0=result:2.168404345e-19
+	cycles:    15618, Stack depth:4
+	EXP(LOG(result))=+2.16840444e-19,+9.28962602e-27, BITS=+24.48 PERFECT
+base:2.0,pow:-63.0=result:1.084202172e-19
+	cycles:    15618, Stack depth:4
+	EXP(LOG(result))=+1.08420222e-19,+4.64481301e-27, BITS=+24.48 PERFECT
+base:2.0,pow:-64.0=result:5.421010862e-20
+	cycles:    16651, Stack depth:4
+	EXP(LOG(result))=+5.42101109e-20,+2.32240650e-27, BITS=+24.48 PERFECT
+base:2.0,pow:-65.0=result:2.710505431e-20
+	cycles:    12573, Stack depth:4
+	EXP(LOG(result))=+2.71050555e-20,+1.16120325e-27, BITS=+24.48 PERFECT
+base:2.0,pow:-66.0=result:1.355252716e-20
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+1.35525277e-20,+5.80601626e-28, BITS=+24.48 PERFECT
+base:2.0,pow:-67.0=result:6.776263578e-21
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+6.77626387e-21,+2.90300813e-28, BITS=+24.48 PERFECT
+base:2.0,pow:-68.0=result:3.388131789e-21
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+3.38813193e-21,+1.45150407e-28, BITS=+24.48 PERFECT
+base:2.0,pow:-69.0=result:1.694065895e-21
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+1.69406600e-21,+1.08862805e-28, BITS=+23.89
+base:2.0,pow:-70.0=result:8.470329473e-22
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+8.47033002e-22,+5.44314025e-29, BITS=+23.89
+base:2.0,pow:-71.0=result:4.235164736e-22
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+4.23516501e-22,+2.72157012e-29, BITS=+23.89
+base:2.0,pow:-72.0=result:2.117582368e-22
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+2.11758250e-22,+1.36078506e-29, BITS=+23.89
+base:2.0,pow:-73.0=result:1.058791184e-22
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+1.05879125e-22,+6.80392531e-30, BITS=+23.89
+base:2.0,pow:-74.0=result:5.293955920e-23
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+5.29395615e-23,+2.26797510e-30, BITS=+24.48 PERFECT
+base:2.0,pow:-75.0=result:2.646977960e-23
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+2.64697807e-23,+1.13398755e-30, BITS=+24.48 PERFECT
+base:2.0,pow:-76.0=result:1.323488980e-23
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.32348904e-23,+5.66993776e-31, BITS=+24.48 PERFECT
+base:2.0,pow:-77.0=result:6.617444900e-24
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+6.61744518e-24,+2.83496888e-31, BITS=+24.48 PERFECT
+base:2.0,pow:-78.0=result:3.308722450e-24
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+3.30872259e-24,+1.41748444e-31, BITS=+24.48 PERFECT
+base:2.0,pow:-79.0=result:1.654361225e-24
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.65436130e-24,+7.08742220e-32, BITS=+24.48 PERFECT
+base:2.0,pow:-80.0=result:8.271806126e-25
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+8.27180648e-25,+3.54371110e-32, BITS=+24.48 PERFECT
+base:2.0,pow:-81.0=result:4.135903063e-25
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+4.13590324e-25,+1.77185555e-32, BITS=+24.48 PERFECT
+base:2.0,pow:-82.0=result:2.067951531e-25
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+2.06795162e-25,+8.85927774e-33, BITS=+24.48 PERFECT
+base:2.0,pow:-83.0=result:1.033975766e-25
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+1.03397581e-25,+4.42963887e-33, BITS=+24.48 PERFECT
+base:2.0,pow:-84.0=result:5.169878828e-26
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+5.16987905e-26,+2.21481944e-33, BITS=+24.48 PERFECT
+base:2.0,pow:-85.0=result:2.584939414e-26
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+2.58493958e-26,+1.66111458e-33, BITS=+23.89
+base:2.0,pow:-86.0=result:1.292469707e-26
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.29246979e-26,+8.30557289e-34, BITS=+23.89
+base:2.0,pow:-87.0=result:6.462348536e-27
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+6.46234895e-27,+4.15278644e-34, BITS=+23.89
+base:2.0,pow:-88.0=result:3.231174268e-27
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+3.23117448e-27,+2.07639322e-34, BITS=+23.89
+base:2.0,pow:-89.0=result:1.615587134e-27
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+1.61558724e-27,+1.03819661e-34, BITS=+23.89
+base:2.0,pow:-90.0=result:8.077935669e-28
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+8.07793602e-28,+3.46065537e-35, BITS=+24.48 PERFECT
+base:2.0,pow:-91.0=result:4.038967835e-28
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+4.03896801e-28,+1.73032768e-35, BITS=+24.48 PERFECT
+base:2.0,pow:-92.0=result:2.019483917e-28
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+2.01948400e-28,+8.65163842e-36, BITS=+24.48 PERFECT
+base:2.0,pow:-93.0=result:1.009741959e-28
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.00974204e-28,+8.55759887e-36, BITS=+23.49
+base:2.0,pow:-94.0=result:5.048709793e-29
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+5.04871022e-29,+4.27879944e-36, BITS=+23.49
+base:2.0,pow:-95.0=result:2.524354897e-29
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+2.52435511e-29,+2.13939972e-36, BITS=+23.49
+base:2.0,pow:-96.0=result:1.262177448e-29
+	cycles:    17958, Stack depth:4
+	EXP(LOG(result))=+1.26217756e-29,+1.06969986e-36, BITS=+23.49
+base:2.0,pow:-97.0=result:6.310887242e-30
+	cycles:    13650, Stack depth:4
+	EXP(LOG(result))=+6.31088778e-30,+5.34849930e-37, BITS=+23.49
+base:2.0,pow:-98.0=result:3.155443621e-30
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+3.15544389e-30,+2.67424965e-37, BITS=+23.49
+base:2.0,pow:-99.0=result:1.577721810e-30
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+1.57772194e-30,+1.33712482e-37, BITS=+23.49
+base:2.0,pow:-100.0=result:7.888609052e-31
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+7.88860972e-31,+6.68562412e-38, BITS=+23.49
+base:2.0,pow:-101.0=result:3.944304526e-31
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+3.94430486e-31,+3.34281206e-38, BITS=+23.49
+base:2.0,pow:-102.0=result:1.972152263e-31
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.97215243e-31,+1.67140603e-38, BITS=+23.49
+base:2.0,pow:-103.0=result:9.860761315e-32
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+9.86076215e-32,+8.35703015e-39, BITS=+23.49
+base:2.0,pow:-104.0=result:4.930380658e-32
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+4.93038108e-32,+4.17851508e-39, BITS=+23.49
+base:2.0,pow:-105.0=result:2.465190329e-32
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+2.46519054e-32,+2.08925754e-39, BITS=+23.49
+base:2.0,pow:-106.0=result:1.232595164e-32
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.23259522e-32,+5.28054103e-40, BITS=+24.48 PERFECT
+base:2.0,pow:-107.0=result:6.162975822e-33
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+6.16297609e-33,+2.64027051e-40, BITS=+24.48 PERFECT
+base:2.0,pow:-108.0=result:3.081487911e-33
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+3.08148804e-33,+1.32013526e-40, BITS=+24.48 PERFECT
+base:2.0,pow:-109.0=result:1.540743956e-33
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+1.54074402e-33,+6.60067629e-41, BITS=+24.48 PERFECT
+base:2.0,pow:-110.0=result:7.703719778e-34
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+7.70372011e-34,+3.30033814e-41, BITS=+24.48 PERFECT
+base:2.0,pow:-111.0=result:3.851859889e-34
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+3.85186005e-34,+1.65016907e-41, BITS=+24.48 PERFECT
+base:2.0,pow:-112.0=result:1.925929944e-34
+	cycles:    17958, Stack depth:4
+	EXP(LOG(result))=+1.92593003e-34,+8.25084536e-42, BITS=+24.48 PERFECT
+base:2.0,pow:-113.0=result:9.629649722e-35
+	cycles:    14727, Stack depth:4
+	EXP(LOG(result))=+9.62965013e-35,+4.12542268e-42, BITS=+24.48 PERFECT
+base:2.0,pow:-114.0=result:4.814824861e-35
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+4.81482507e-35,+2.06271134e-42, BITS=+24.48 PERFECT
+base:2.0,pow:-115.0=result:2.407412430e-35
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+2.40741253e-35,+1.03135567e-42, BITS=+24.48 PERFECT
+base:2.0,pow:-116.0=result:1.203706215e-35
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+1.20370627e-35,+5.15677835e-43, BITS=+24.48 PERFECT
+base:2.0,pow:-117.0=result:6.018531076e-36
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+6.01853159e-36,+5.10072641e-43, BITS=+23.49
+base:2.0,pow:-118.0=result:3.009265538e-36
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+3.00926579e-36,+2.55036321e-43, BITS=+23.49
+base:2.0,pow:-119.0=result:1.504632769e-36
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+1.50463290e-36,+1.27518160e-43, BITS=+23.49
+base:2.0,pow:-120.0=result:7.523163845e-37
+	cycles:    17958, Stack depth:4
+	EXP(LOG(result))=+7.52316448e-37,+6.37590801e-44, BITS=+23.49
+base:2.0,pow:-121.0=result:3.761581923e-37
+	cycles:    15804, Stack depth:4
+	EXP(LOG(result))=+3.76158224e-37,+3.18795401e-44, BITS=+23.49
+base:2.0,pow:-122.0=result:1.880790961e-37
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+1.88079112e-37,+1.59397700e-44, BITS=+23.49
+base:2.0,pow:-123.0=result:9.403954807e-38
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+9.40395560e-38,+7.96988502e-45, BITS=+23.49
+base:2.0,pow:-124.0=result:4.701977403e-38
+	cycles:    17958, Stack depth:4
+	EXP(LOG(result))=+4.70197780e-38,+3.98494251e-45, BITS=+23.49
+base:2.0,pow:-125.0=result:2.350988702e-38
+	cycles:    16881, Stack depth:4
+	EXP(LOG(result))=+2.35098890e-38,+1.99247125e-45, BITS=+23.49
+base:2.0,pow:-126.0=result:1.175494351e-38
+	cycles:    17958, Stack depth:4
+	EXP(LOG(result))=+1.17549445e-38,+9.96235627e-46, BITS=+23.49
+base:2.0,pow:-127.0=result:0.000000000e+00
+	cycles:    17954, Stack depth:4
+	EXP(LOG(result))=+1.95237310e-02,+1.95237310e-02, BITS=+121.32 PERFECT
+max stack: 4

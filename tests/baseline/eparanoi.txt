@@ -1,0 +1,99 @@
+This version of paranoia omits test for extra precise subexpressions
+and includes a few additional tests.
+0 = 0.0000000000e+00
+1 = 1.0000000000e+00
+1+1 = 2.0000000000e+00
+Program is now RUNNING tests on small integers:
+-1, 0, 1/2, 1, 2, 3, 4, 5, 9, 27, 32 & 240 are O.K.
+
+Searching for Radix and Precision.
+Radix = 2.0000000000e+00
+Closest relative separation found is U 1 = 5.9604644775e-08
+Recalculating radix and precision.confirms closest relative separation U1 .
+Radix confirmed.
+The number of significant digits of the Radix is2.4000000000e+01
+Subtraction appears to be normalized, as it should be.
+Checking for guard digit in *, /, and -.
+ *, /, and - appear to have guard digits, as they should.
+Checking rounding on multiply, divide and add/subtract.
+Multiplication appears to chop.
+Division appears to chop.
+1+U2-[u2(1/2+U2)+1] != 0
+Addition/Subtraction neither rounds nor chops.
+Sticky bit used incorrectly or not at all.
+lack(s) of guard digits or failure(s) to correctly round or chop
+(noted above) count as one flaw in the final tally below
+
+Does Multiplication commute?  Testing on 20 random pairs.
+     No failures found in 20 integer pairs.
+
+Running test of square root(x).
+Testing if sqrt(X * X) == X for 20 Integers X.
+Test for sqrt monotonicity.
+sqrt has passed a test for Monotonicity.
+Testing whether sqrt is rounded or chopped.
+Square root is neither chopped nor correctly rounded.
+Observed errors run from -5.0000005960e-01
+	to -9.9999988079e-01
+ulps.
+Testing powers Z^i for small Integers Z and i.
+... no discrepancies found.
+
+Seeking Underflow thresholds UfThold and E0.
+
+* * * FLOATING-POINT ERROR * * *
+Smallest strictly positive number found is E0 = 1.1754943508e-38
+Z = 1.1754943508e-38
+Since comparison denies Z = 0, evaluating (Z + Z) / Z should be safe.
+What the machine gets for (Z + Z) / Z is 2.0000000000e+00
+This is O.K., provided Over/Underflow has NOT just been signaled.
+
+The Underflow threshold is 1.1754943508e-38
+below which calculation may suffer larger Relative error than merely roundoff.
+Since underflow occurs below the threshold
+UfThold = 2.0000000000e+00
+	to the power  -1.2600000000e+02
+only underflow should afflict the expression 2.0000000000e+00
+	to the power  -1.2700000000e+02
+Actually calculating yields: 0.0000000000e+00
+This computed value is O.K.
+
+Testing X^((X + 1) / (X - 1)) vs. exp(2) = 7.3890542984e+00
+	as X -> 1.
+Calculated 7.3892760277e+00
+ for 	(1 + -5.9604644775e-08
+	to the power -3.3554430000e+07
+	differs from correct value by 2.2172927856e-04
+	This much error may spoil financial
+	calculations involving tiny interest rates.
+Testing powers Z^Q at four nearly extreme values.
+ ... no discrepancies found.
+
+Searching for Overflow threshold:
+This may generate an error.
+2.0000000000e+00
+	times -2.6584559916e+36
+	equals -5.3169119831e+36
+Can `Z = -Y' overflow?
+Trying it on Y = -2.6584559916e+36
+Seems O.K.
+overflow past -2.6584559916e+36
+	shrinks to -5.3169119831e+36
+Overflow threshold is V  = 2.6584559916e+36
+Overflow saturates at V0 = 2.6584559916e+36
+No Overflow should be signaled for V * 1 = 2.6584559916e+36
+                           nor for V / 1 = 2.6584559916e+36
+Any overflow signal separating this * from the one
+above is a DEFECT.
+
+ unbalanced range; UfThold * V = 3.1250000000e-02
+	is too far from 1.
+
+The number of  SERIOUS DEFECTs  discovered = 1.
+The number of  DEFECTs  discovered =         1.
+The number of  FLAWs  discovered =           2.
+
+The arithmetic diagnosed has unacceptable serious defects.
+
+A total of 1 floating point exceptions were registered.
+END OF TEST.

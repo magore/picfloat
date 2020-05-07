@@ -1,0 +1,625 @@
+*** psim-0.4.orig/debug.c	2003-12-13 22:14:32.000000000 -0500
+--- debug.c	2003-12-12 12:52:16.000000000 -0500
+***************
+*** 43,48 ****
+--- 43,49 ----
+  int step = 0;
+  int quit = 0;
+  int ignore_break = 0;
++ int ex_flag = 0;	// Added by Mike Gore
+  
+  
+  static char hex_digits [] = "0123456789abcdef";
+***************
+*** 190,200 ****
+  }
+  
+  
+  static int go_cmd (int argc, char *argv[])
+  {
+!   if (argc != 1)
+      return (-1);
+  
+    step = 0;
+    trace = 0;
+    run = 1;
+--- 191,265 ----
+  }
+  
+  
++ // =======================================================================
++ // Added to allow external programs to run the simulator
++ // 2002,2003 Mike Gore
++ // my_ex_cmd( addr ) 
++ // 	Similate code starting at addr until a return 
++ // 	(at same stack level) is reached
++ int broke = 0;
++ void my_ex_cmd (int addr)
++ {
++ 	int wd;
++ 
++ 	broke = 1;
++ 	nextpc = addr+1;
++ 	pc = addr;
++ 	stack_ind = 0;
++ 	skip_flag = 0;
++ 	ex_flag = 1;
++ 	push(addr);
++ 	cycle = 0;
++ 	step = 0;
++ 	trace = 0;
++ 	run = 1;
++ 	ignore_break = 0;
++ 	wd = 0;
++ 	// printf("start: pc:%04x, nextpc:%04x, cycle:%ld\n",pc,nextpc,cycle);
++ 	while(run) {
++ 		if(++wd > 1000000) {
++ 			run = 0;
++ 			trace = 0;
++ 			step = 0;
++ 			printf("Stuck\n");;
++ 			show_status();
++ 			exit(1);
++ 		}
++ 		if(step)
++ 			--step;
++ 		exec_inst();
++ 		if(!ex_flag)
++ 			run = 0;
++ 	}
++ 	// printf("stop: pc:%04x, nextpc:%04x, cycle:%ld\n",pc,nextpc,cycle);
++ 	broke = 0;
++ }
++ 
++ // Added to allow external programs to run the simulator
++ // 2002,2003 Mike Gore
++ // ex_cmd
++ static int ex_cmd (int argc, char *argv[])
++ {
++   if (argc != 2)
++ 		return (-1);
++ 	nextpc = parse_address (argv [1]);
++ 	my_ex_cmd(nextpc);
++   return (0);
++ }
++ // =======================================================================
++ 
++ 
++ 
+  static int go_cmd (int argc, char *argv[])
+  {
+!   if (argc < 1)
+      return (-1);
+  
++ // Added to allow external programs to run the simulator
++ // 2002,2003 Mike Gore
++ // ex_cmd
++   if(argc == 2)
++ 		nextpc = parse_address (argv [1]);
+    step = 0;
+    trace = 0;
+    run = 1;
+***************
+*** 430,435 ****
+--- 495,504 ----
+  #endif
+    { "go", go_cmd,           1, "Go                              go\n" },
+    { "help", help_cmd,       1, "Help                            list commands\n" },
++ // Added to allow external programs to run the simulator
++ // 2002,2003 Mike Gore
++ // Added "ex" - execute function call in simulator until matching return
++   { "ex", ex_cmd,           1, "EXecute							Execute fuction\n" },
+    { "press", press_cmd,     1, "Press <button>                  press button\n" },
+    { "quit", quit_cmd,       4, "QUIT                            quit simulator\n" },
+    { "read", read_cmd,       1, "Read <addr>                     read memory at addr\n" },
+***************
+*** 554,559 ****
+--- 623,633 ----
+  {
+    run = 0;
+    step = 0;
++ // Added to allow external programs to run the simulator
++ // 2002,2003 Mike Gore
++   ex_flag = 0;
++   if(broke)
++ 	exit(1);
+  }
+  
+  
+*** psim-0.4.orig/ihexin.c	2003-12-13 22:14:32.000000000 -0500
+--- ihexin.c	2003-12-12 12:43:43.000000000 -0500
+***************
+*** 122,127 ****
+--- 122,135 ----
+        if (! fgets (buffer, MAX_IHEX_CHARS, s->f))
+  	return (0);
+        buflen = strlen (buffer);
++ // 2002,2003 Mike Gore
++ // remove control characters
++ 		while(buflen) {
++ 			if(buffer[buflen-1] < ' ')
++ 				buffer[--buflen] = 0;
++ 			else break;
++ 		}
++ 
+      }
+    while (buffer [0] != ':');
+  
+***************
+*** 151,156 ****
+--- 159,170 ----
+    /* extract type */
+    ihex_type = hex_byte (& sp, & cksm);
+  
++ // printf("addr: %04x,len:%02x, type:%02x\n", s->base_addr,ihex_len,ihex_type);
++ // 2002,2003 Mike Gore
++ // Added next two lines
++ 	if(ihex_type == 4) 
++ 		ihex_type = 0;
++ 
+    /* make sure we recognize the record type */
+    if ((ihex_type != 0) & (ihex_type != 1))
+      return (0);
+***************
+*** 204,212 ****
+  
+    if (s->idx == s->len)
+      {
+!       if (! fetch_ihex (s))
+  	return (0);
+      }
+  
+    if (ret_len > (s->len - s->idx))
+      ret_len = s->len;
+--- 218,230 ----
+  
+    if (s->idx == s->len)
+      {
+! 		if (! fetch_ihex (s)) {
+! // 2002,2003 Mike Gore
+! // Add error message
+! 			printf(" oops: %s\n",s);
+  			return (0);
+  		}
++     }
+  
+    if (ret_len > (s->len - s->idx))
+      ret_len = s->len;
+*** psim-0.4.orig/main.c	2003-12-13 22:14:32.000000000 -0500
+--- main.c	2003-12-13 19:58:14.000000000 -0500
+***************
+*** 28,140 ****
+  #include "display.h"
+  #endif
+  
+  
+! char *progname;
+! 
+! void print_usage (FILE *f)
+! {
+!   fprintf (f, "Usage: %s <hexfile>\n", progname);
+! }
+! 
+! 
+! void fatal (int retval, char *fmt, ...)
+! {
+!   va_list ap;
+! 
+!   if (retval == 1)
+!     print_usage (stderr);
+!   else
+!     {
+!       fprintf (stderr, "%s: ", progname);
+!       va_start (ap, fmt);
+! 
+!       vfprintf (stderr, fmt, ap);
+!       va_end (ap);
+!     }
+!   exit (retval);
+! }
+! 
+! 
+! char disbuf [20];
+! 
+! 
+! void show_status (void)
+! {
+!   printf ("%6lu  ", cycle);
+!   if (skip_flag)
+!     strcpy (disbuf, "pipeline stall");
+!   else
+!     {
+!       sprintf (disbuf, "%04x: ", pc);
+!       disassemble_inst (read_rom (pc), & disbuf [strlen (disbuf)]);
+!     }
+!   printf ("%-20s  W=%02x  S=%c%c%c%c%c%c%c%c  TMR0=%02x",
+! 	  disbuf,
+! 	  (int) w,
+! 	  (status & STATUS_IRP) ? 'I' : '.',
+! 	  (status & STATUS_RP1) ? '1' : '.',
+! 	  (status & STATUS_RP0) ? '0' : '.',
+! 	  (status & STATUS_TO ) ? 'T' : '.',
+! 	  (status & STATUS_PD ) ? 'P' : '.',
+! 	  (status & STATUS_Z  ) ? 'Z' : '.',
+! 	  (status & STATUS_DF ) ? 'D' : '.',
+! 	  (status & STATUS_C  ) ? 'C' : '.',
+! 	  (int) tmr0);
+! #ifdef VIDEO
+!   printf ("  portb=%02x  pos=%3d,%3d", portb, line, hpos);
+! #endif
+!   printf ("\n");
+! }
+! 
+  
+  int main (int argc, char *argv [])
+  {
+    progname = argv [0];
+  
+    if (argc != 2)
+-     fatal (1, NULL);
+- 
+-   init_rom ();
+  
+!   if (! load_rom_file (argv [1]))
+!     fatal (2, "can't read hex file\n");
+! 
+! #ifdef VIDEO
+!   init_display (argc, argv, "PSIM");
+! #endif
+! 
+!   pc = 0;
+!   nextpc = 1;
+! 
+!   init_reg ();
+!   init_debug ();
+  
+!   while (! quit)
+!     {
+!       while (run || step)
+! 	{
+! 	  if (step)
+! 	    step--;
+! 	  if ((! skip_flag) && (! ignore_break) && test_rom_flag (pc, ROM_FLAG_BREAKPOINT))
+! 	    {
+! 	      printf ("breakpoint reached at %04x\n", pc);
+! 	      run = 0;
+! 	      step = 0;
+! 	    }
+! 	  else
+! 	    {
+! 	      ignore_break = 0;
+! 	      exec_inst ();
+! #ifdef VIDEO
+! 	      display_pixel (! (portb & 0x40), ! (portb & 0x20), portb & 0x01);
+! #endif
+! 	      if (trace && (run || step))
+! 		show_status ();
+! 	    }
+! 	}
+!       show_status ();
+!       debug ();
+!     }
+  
+    exit (0);
+  }
+--- 28,51 ----
+  #include "display.h"
+  #endif
+  
++ extern char *progname;
+  
+! // 2002,2003 Mike Gore
+! // Modified to allow external programs to run the simulator
+! // Do not compile main() if an external program will controll the emulator
+  
+  int main (int argc, char *argv [])
+  {
+    progname = argv [0];
+  
+    if (argc != 2)
+  
+!     fatal (1, NULL);
+! // Load file to simulate
+!   pic_init(argv[1]);
+  
+! // moved simulator loop into command called sim_pic()
+!   sim_pic();
+  
+    exit (0);
+  }
+*** psim-0.4.orig/Makefile	2003-12-13 22:14:32.000000000 -0500
+--- Makefile	2003-12-13 22:12:15.000000000 -0500
+***************
+*** 21,35 ****
+  # -----------------------------------------------------------------------------
+  # You may want or need to change the following definitions.
+  # -----------------------------------------------------------------------------
+  
+  SIM_OPTIONS = -DSIM_INST_SET
+  # VIDEO = 1
+  
+  DEBUG_OPTIONS = -g
+  
+  ifdef VIDEO
+  LDFLAGS = -L/usr/X11R6/lib
+! LIBS = -lX11
+  CFLAGS = $(DEBUG_OPTIONS) $(SIM_OPTIONS) -DVIDEO -I/usr/X11R6/include
+  else
+  CFLAGS = $(DEBUG_OPTIONS) $(SIM_OPTIONS)
+--- 21,43 ----
+  # -----------------------------------------------------------------------------
+  # You may want or need to change the following definitions.
+  # -----------------------------------------------------------------------------
++ # 2002,2003 Mike Gore
++ # Added Changes to allow the PSIM core to be used by external programs
++ # removed all simulator code out of main.c and moved to psim.c
++ # -----------------------------------------------------------------------------
++ 
++ TEST=TRUE
+  
++ CC=gcc
+  SIM_OPTIONS = -DSIM_INST_SET 
+  # VIDEO = 1
++ LIBS = -lm
+  
+  DEBUG_OPTIONS = -g
+  
+  ifdef VIDEO
+  LDFLAGS = -L/usr/X11R6/lib
+! LIBS = -lX11 -lm
+  CFLAGS = $(DEBUG_OPTIONS) $(SIM_OPTIONS) -DVIDEO -I/usr/X11R6/include
+  else
+  CFLAGS = $(DEBUG_OPTIONS) $(SIM_OPTIONS)
+***************
+*** 48,85 ****
+  
+  HEADERS = ihexin.h pic.h display.h
+  
+! SOURCES = debug.c display.c ihexin.c main.c picadc.c picdis.c picinst.c \
+  	picio.c picmem.c pictmr0.c
+  
+  ifdef VIDEO
+! OBJECTS = main.o picinst.o picmem.o picdis.o picio.o picadc.o pictmr0.o \
+! 	display.o debug.o \
+! 	ihexin.o
+  else
+! OBJECTS = main.o picinst.o picmem.o picdis.o picio.o picadc.o pictmr0.o \
+! 	debug.o \
+! 	ihexin.o
+  endif
+  
+  DISTFILES = $(MISC) $(SOURCES) $(HEADERS)
+- 
+  all: psim
+  
+  clean:
+! 	rm -f *.o psim
+  
+  dist: $(DISTFILES)
+  	-rm -rf $(DSTNAME)
+  	mkdir $(DSTNAME)
+  	for f in $(DISTFILES); do ln $$f $(DSTNAME)/$$f; done
+! 	tar --gzip -chf $(DSTNAME).tar.gz $(DSTNAME)
+! 	-rm -rf $(DSTNAME)
+  
+  picsim.tar.gz: $(MISC) $(SOURCES) $(HEADERS)
+  	tar -czf picsim.tar.gz $(MISC) $(SOURCES) $(HEADERS)
+  
+- psim: $(OBJECTS)
+- 	$(CC) $(LDFLAGS) -o $@ $(OBJECTS) $(LIBS)
+  
+  ifdef VIDEO
+  main.o: pic.h display.h
+--- 56,96 ----
+  
+  HEADERS = ihexin.h pic.h display.h
+  
+! SOURCES = psim.c debug.c display.c ihexin.c main.c picadc.c picdis.c picinst.c \
+  	picio.c picmem.c pictmr0.c
+  
+  ifdef VIDEO
+! OBJECTS = psim.o picinst.o picmem.o picdis.o picio.o picadc.o pictmr0.o \
+!       display.o debug.o ihexin.o
+  else
+! OBJECTS = psim.o picinst.o picmem.o picdis.o picio.o picadc.o pictmr0.o \
+!       debug.o ihexin.o
+  endif
+  
+  DISTFILES = $(MISC) $(SOURCES) $(HEADERS)
+  all:	psim
+  
++ # Compile simulator to run built in test in pic code file itself
++ psim:	psim.a 
++ 	$(CC) $(LDFLAGS) main.c -o $@ psim.a $(LIBS)
++ 
++ # Build a library of psim object files
++ psim.a: $(OBJECTS)
++ 	ar rc psim.a $(OBJECTS)
++ 	ranlib psim.a
++ 
+  clean:
+! 	-rm -f $(OBJECTS) psim.a psim
+  
+  dist: $(DISTFILES)
+  	-rm -rf $(DSTNAME)
+  	mkdir $(DSTNAME)
+  	for f in $(DISTFILES); do ln $$f $(DSTNAME)/$$f; done
+! 
+  
+  picsim.tar.gz: $(MISC) $(SOURCES) $(HEADERS)
+  	tar -czf picsim.tar.gz $(MISC) $(SOURCES) $(HEADERS)
+  
+  
+  ifdef VIDEO
+  main.o: pic.h display.h
+***************
+*** 87,92 ****
+--- 98,104 ----
+  main.o: pic.h
+  endif
+  
++ 
+  picinst.o: pic.h
+  
+  picdis.o: pic.h
+***************
+*** 104,107 ****
+  debug.o: pic.h
+  
+  ihexin.o: ihexin.h
+- 
+--- 116,118 ----
+*** psim-0.4.orig/pic.h	2003-12-13 22:14:32.000000000 -0500
+--- pic.h	2003-12-08 12:50:37.000000000 -0500
+***************
+*** 18,41 ****
+   *
+   * $Id: psim.patch,v 1.1.1.1 2003/12/14 03:40:05 magore Exp $
+   */
+  
+  
+  #define MAXROM 0x2000
+  #define MAXRAM 0x100
+  #define MAXSTACK 8
+  
+! typedef unsigned char bool;
+! typedef unsigned char byte;
+! typedef unsigned short romaddr;
+! typedef unsigned short word;
+! 
+! /* in picmem.c: */
+  
+  extern unsigned long cycle;
+  
+  extern romaddr pc, nextpc;
+  extern bool skip_flag;
+  
+  
+  extern byte w;
+  extern byte option;
+--- 18,43 ----
+   *
+   * $Id: psim.patch,v 1.1.1.1 2003/12/14 03:40:05 magore Exp $
+   */
++ // 2002,2003 Mike Gore
++ // Modified typedefs - next 4 lines - into defines
+  
++ #define bool unsigned char
++ #define byte unsigned char 
++ #define romaddr unsigned short int
++ #define word unsigned short int
+  
+  #define MAXROM 0x2000
+  #define MAXRAM 0x100
+  #define MAXSTACK 8
+  
+! extern int stack_ind;
+  
+  extern unsigned long cycle;
+  
+  extern romaddr pc, nextpc;
+  extern bool skip_flag;
+  
++ extern int ex_flag,ex_addr;
+  
+  extern byte w;
+  extern byte option;
+***************
+*** 117,122 ****
+--- 119,125 ----
+  void push (romaddr addr);
+  romaddr pop (void);
+  
++ void my_ex_cmd (int addr);
+  
+  typedef byte regrdfcn (byte addr);
+  typedef void regwrfcn (byte addr, byte data);
+*** psim-0.4.orig/picmem.c	2003-12-13 22:14:32.000000000 -0500
+--- picmem.c	2003-12-08 12:56:22.000000000 -0500
+***************
+*** 51,60 ****
+  void (* ram_wr_fn [MAXRAM])(byte addr, byte data);
+  
+  
+  void push (romaddr addr)
+  {
+    int i;
+! 
+    for (i = MAXSTACK - 1; i > 0; i--)
+      stack [i] = stack [i - 1];
+    stack [0] = addr;
+--- 51,70 ----
+  void (* ram_wr_fn [MAXRAM])(byte addr, byte data);
+  
+  
++ int stack_ind = 0;
+  void push (romaddr addr)
+  {
+    int i;
+! // Added to allow external programs to run the simulator
+! // 2002,2003 Mike Gore
+! 	if(stack_ind < MAXSTACK)
+! 		++stack_ind;
+! 	else {
+! 		printf("STACK OVERFLOW\n");
+! 		run = 0;
+! 		step = 0;
+! 		ex_flag = 0;
+! 	}
+    for (i = MAXSTACK - 1; i > 0; i--)
+      stack [i] = stack [i - 1];
+    stack [0] = addr;
+***************
+*** 65,74 ****
+--- 75,108 ----
+  	romaddr result;
+  	int i;
+  
++ // 2002,2003 Mike Gore
++ // Added to allow external programs to run the simulator
++ // We track the stack level to determine if a call has returned yet
++ // No stack to pop!
++ 	if(!stack_ind) {
++ 		printf("STACK UNDERFLOW\n");
++ 		ex_flag = 0;
++ 		run = 0;
++ 		step = 0;
++ 		return(pc);
++ 	}
++ 
++ 	if(stack_ind) 
++ 		--stack_ind;
++ 
++ 	if(!stack_ind) {
++ 		if(!stack_ind && ex_flag) {
++ 			ex_flag = 0;
++ 			run = 0;
++ 			step = 0;
++ 		}
++ 	}
++ 
+    result = stack [0];
+    for (i = 0; i < MAXSTACK - 1; i++)
+      stack [i] = stack [i+1];
+    stack [MAXSTACK - 1] = result;
++ 	
+    return (result);
+  }
+  
+***************
+*** 134,140 ****
+  
+    for (i = 0; i < MAXRAM; i++)
+      ramptr [i] = (void *) 0;
+!   for (i = 0x0c; i <= 0x3f; i++)  /* $$$ hack alert */
+      {
+        ramptr [i] = ramptr [i+0x80] = & ram [i];
+        ram_rd_fn [i] = ram_rd_fn [i+0x80] = & ram_rd;
+--- 168,174 ----
+  
+    for (i = 0; i < MAXRAM; i++)
+      ramptr [i] = (void *) 0;
+!   for (i = 0x0c; i <= 0x7f; i++)  /* $$$ hack alert */
+      {
+        ramptr [i] = ramptr [i+0x80] = & ram [i];
+        ram_rd_fn [i] = ram_rd_fn [i+0x80] = & ram_rd;

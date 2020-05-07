@@ -1,0 +1,40 @@
+Numbers Formats used in the picfloat project
+
+Temporary Real Numbers are used for internal floating point registers
+
+<SIGN> <EXP> <MANTISSA>
+7..0   7..0  31..0
+
+Byte Offsets
+MAN     equ     0
+MAN_LSB equ     0
+MAN_MSB equ     3
+EXP     equ     4
+SIGN    equ     5
+
+Exponent:
+	The exponent is biased by 127 as per the IEEE754 specs for
+single precision numbers - so 1.0 has an exponent of 127 - values less
+then 127 are negative exponents (i.e. fractional numbers). The value of
+one would have avalue of the MSB set to 1 (MAN_MSB above)
+The number zero has the reserved exponent value of 0.  
+The purpose of this format is to arrange numbers in a lexical order 
+so an ascii string comparison of to floating point numbers will yield 
+the correct result for a compare.
+
+
+Sign:
+        The sign is 128 for negative numbers and 0 for positive numbers
+
+Mantissa:
+        32 bit number - note the IEEE754 spec calls for 23 bits for a single
+precision number - these extra bits help provide the guard bits that ensure
+better accuracy when doing intermediate calculations.
+
+Notes: Values are converted to and from this Temporary real format when
+loading or storing IEEE32 bit numbers
+
+IEEE32 Format
+<SIGN> <EXP>  <MANTISSA>
+31     30..23 22..0
+

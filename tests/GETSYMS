@@ -1,0 +1,62 @@
+#!/bin/bash
+#
+
+if(($# != 2))
+then
+       echo usage: $0 LIST_FILE SYMBOL_FILE
+		exit1
+fi
+
+LIST_FILE=$1
+SYM_FILE=$2
+
+grep "^_FP_ERROR" $LIST_FILE >>$$.tmp
+grep "^_PIC_INIT" $LIST_FILE >>$$.tmp
+grep "^_TRac_LOAD" $LIST_FILE >>$$.tmp
+grep "^_TRac_STORE" $LIST_FILE >>$$.tmp
+grep "^_TRarg_LOAD" $LIST_FILE >>$$.tmp
+grep "^_TRarg_STORE" $LIST_FILE >>$$.tmp
+grep "^_FParg_ONE" $LIST_FILE >>$$.tmp
+grep "^_IEEE_TO_TRac" $LIST_FILE >>$$.tmp
+grep "^_IEEE_TO_TRarg" $LIST_FILE >>$$.tmp
+grep "^_TRac_TO_IEEE" $LIST_FILE >>$$.tmp
+grep "^_TRarg_TO_IEEE" $LIST_FILE >>$$.tmp
+grep "^_FPac_CLR" $LIST_FILE >>$$.tmp
+grep "^_FParg_CLR" $LIST_FILE >>$$.tmp
+grep "^_FPac_SWAP" $LIST_FILE >>$$.tmp
+grep "^_FP_CMPU" $LIST_FILE >>$$.tmp
+grep "^_FP_ADD" $LIST_FILE >>$$.tmp
+grep "^_FP_SUB" $LIST_FILE >>$$.tmp
+grep "^_FP_MUL" $LIST_FILE >>$$.tmp
+grep "^_FP_DIV" $LIST_FILE >>$$.tmp
+grep "^_FP_CMP" $LIST_FILE >>$$.tmp
+grep "^_FP_SQRT" $LIST_FILE >>$$.tmp
+grep "^_FP_LOG" $LIST_FILE >>$$.tmp
+grep "^_FP_EXP" $LIST_FILE >>$$.tmp
+grep "^_FP_POW" $LIST_FILE >>$$.tmp
+grep "^_FP_IPOW" $LIST_FILE >>$$.tmp
+grep "^_FP_SIN" $LIST_FILE >>$$.tmp
+grep "^_FP_COS" $LIST_FILE >>$$.tmp
+grep "^_FP_TAN" $LIST_FILE >>$$.tmp
+grep "^_FP_ASIN" $LIST_FILE >>$$.tmp
+grep "^_FP_ACOS" $LIST_FILE >>$$.tmp
+grep "^_FP_ATAN" $LIST_FILE >>$$.tmp
+grep "^_FP_FLOOR" $LIST_FILE >>$$.tmp
+grep "^_FP_CEIL" $LIST_FILE >>$$.tmp
+grep "^_FTOA" $LIST_FILE >>$$.tmp
+grep "^_ATOF" $LIST_FILE >>$$.tmp
+grep "^_FP_U32" $LIST_FILE >>$$.tmp
+grep "^_FP_I32" $LIST_FILE >>$$.tmp
+grep "^_ITOF32" $LIST_FILE >>$$.tmp
+grep "^_FP_SPLIT" $LIST_FILE >>$$.tmp
+grep "^AC32" $LIST_FILE >>$$.tmp
+grep "^ARG32" $LIST_FILE >>$$.tmp
+grep "^TMP32" $LIST_FILE >>$$.tmp
+grep "^FPac_EXP" $LIST_FILE >>$$.tmp
+grep "^FPac_SIGN" $LIST_FILE >>$$.tmp
+grep "^FParg_EXP" $LIST_FILE >>$$.tmp
+grep "^FParg_SIGN" $LIST_FILE >>$$.tmp
+
+sed<$$.tmp -e "s/^/#define /
+s/0000/0x/" > "$SYM_FILE"
+rm -f $$.tmp

@@ -1,0 +1,21 @@
+PSIM Todo List
+$Id: TODO,v 1.1.1.1 2003/12/14 03:40:06 magore Exp $
+
+By default, pipeline stall cycles should not be shown.  The step command
+should silently proceed past them; the trace command shouldn't show them.
+Of course, they should still be added to the cycle count.
+
+add breakreason arg to dobreak and define suitable constants
+
+add history/traceback
+
+add "next" (i.e., step over) command
+
+reset
+
+interrupts
+
+make video parameters run-time configurable
+
+support video interlace
+

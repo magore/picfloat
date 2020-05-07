@@ -1,0 +1,1155 @@
+========================================================
+This is an Automatically generated file
+Created on Sat Sep 23 21:56:02 EDT 2017
+========================================================
+========================================================
+File: ac32.asm
+_AC32_LOAD:	; Load AC32 = (W)
+_ARG32_LOAD:	; Load ARG32 = (W)
+_TMP32_LOAD:	; Load TMP32 = (W)
+_AC32_STORE:	; Store (W) = AC32
+_ARG32_STORE:	; Store (W) = ARG32
+_TMP32_STORE:	; Store (W) = TMP32
+_AC32_CLR:	; AC32 = 0
+_AC32_COM:	; AC32 = ~AC32
+_AC32_DEC:	; AC32 -= 1
+_AC32_INC:	; AC32 += 1
+_AC32_NEG:	; AC32 - AC32
+_AC32_UMAX:	; AC32 = U32_MAX
+_AC32_IMIN:	; AC32 = I32_MIN
+_AC32_IMAX:	; AC32 = I32_MAX
+_AC32_SH_LSB:	; AC32 >>= 1
+_AC32_SH_LSBC:	; AC32 >>= 1 with carry
+_AC32_SH_MSB:	; AC32 <<= 1
+_AC32_SH_MSBC:	; AC32 <<= 1 with carry
+_AC32_TST:	; Test AC32 == 0 ?
+_AC32_ADD:	; AC32 += ARG32
+_AC32_ADDC:	; AC32 += ARG32 with Carry
+_AC32_CMP:	; Compare AC32 and ARG32, Set Status as if AC32 - ARG32
+_AC32_SWAP:	; SWAP AC32 and ARG32 
+_AC32_SUB:	; AC32 -= ARG32
+_AC32_SUBB:	; AC32 -= ARG32 with borrow
+_I8_TO_I16:	; Sign extend AC32 as 8bit to 16bit number
+_U8_TO_U16:	; Unsigned extend AC32 as 8bit to 16bit unsigned number
+_I8_TO_I32:	; Sign extend AC32 as 8bit to 32bit number
+_I16_TO_I32:	; Sign extend AC32 as 16bit to 32bit number
+_I24_TO_I32:	; Sign extend AC32 as 24bit to 32bit number
+_U8_TO_U32:	; Unsigned extend AC32 as 8bit to 32bit unsigned number
+_U16_TO_U32:	; Unsigned extend AC32 as 16bit to 32bit unsigned number
+_U24_TO_U32:	; Unsigned extend AC32 as 24bit to 32bit unsigned number
+_ARG32_SH_LSB:	; ARG32 >>= 1
+_ARG32_SH_LSBC:	; ARG32 >>= 1 with carry
+_ARG32_SH_MSB:	; ARG32 <<= 1
+_ARG32_SH_MSBC:	; ARG32 <<= 1 with carry
+_ARG32_TST:	; Test ARG32 == 0 ?
+_ARG32_CLR:	; ARG32 = 0
+_TMP32_SH_LSB:	; TMP32 >>= 1
+_TMP32_SH_LSBC:	; TMP32 >>= 1 with carry
+_TMP32_SH_MSB:	; TMP32 <<= 1
+_TMP32_SH_MSBC:	; TMP32 <<= 1 with carry
+_TMP32_TST:	; Test TMP32 == 0 ?
+_TMP32_CLR:	; TMP32 = 0
+_AC32_MUL10:	; AC32 *= 10 (fast)
+_AC32_UDIV:	; AC32 = AC32 / ARG32, TMP32 = AC32 % ARG32
+_AC32_UMUL:	; TMP32:AC32 = AC32 * ARG32 (64bit result)
+========================================================
+File: atof.asm
+_ATOF:		; Convert ASCII to floating point, Store result on FPac
+========================================================
+File: atoi.asm
+_SKIP_SPACES:	; Skip white space in input
+_GET_SIGN:	; Get character and test +/- sign, set _atoi_sign if negative
+_TEST_DIG:	; Is _GETC_CHAR >='0' && <='9' ? Set Carry Clear, else Set Carry
+_TEST_DIG_exit:
+_ATOI:		; Convert ACSII to integer, Store result in AC32
+========================================================
+File: bcd32.asm
+_BCD32:		; Convert Signed AC32 into packed ACSII stored in BCD_BUF - signed
+_BCD32U:	; Convert Unsigned AC32 into packed ACSII stored in BCD_BUF - signed
+_BCD32_PUTS:	; Display BCD result from packed ACSII BCD_BUF
+_BCD32_DIGIT:	; Display one BCD digit from packed ACSII BCD_BUF
+========================================================
+File: fp.asm
+_FP_ERROR: 	; Floating Point Error handler, defined by user
+_IEEE_TO_TRac: 	; Convert IEEE32 number in AC32 to Temporary REAL
+_TRac_TO_IEEE: 	; Convert Temporary REAL into IEEE32 format number in AC32 
+_IEEE_TO_TRarg:	; Convert IEEE32 number in ARG32 to Temporary REAL
+_TRarg_TO_IEEE:	; Convert Temporary REAL into IEEE32 format number in ARG32 
+_TRac_LOAD: 	; Load 40bit temp real in FPac, W points to source address
+_TRac_STORE: 	; Save 40bit temp real in FPac, W points to target address
+_TRarg_LOAD: 	;  Load 40bit temp real in FPac, W points to source address
+_TRarg_STORE: 	; Save 40bit temp real in FPac , W points to target address
+_FPac_SWAP:	; Swap FPac and FParg
+_FPac_CLR:	; FPac = 0
+_FParg_CLR:	; FParg = 0
+_FParg_ONE:	; FParg = 1
+_FPac_ONE:	; FPac = 1
+_FPac_TST:	; Return SGN(FPac)
+_FParg_TST:	; Return SGN(FParg)
+_FP_CMP:	; Return Status (FPac - FParg)
+_FP_CMPU:	; Return Status Unsigned (FPac - FParg)
+_FPac_RND:	; Round Value in FPac prior to IEEE storage
+_FPac_INC_EXP:	; Increment FPac_EXP if nonzero, test for overflow
+_FPac_DEC_EXP:	; Decrement FPac_EXP if nonzero, test for underflow
+_FPac_NORM:	; Normalize Floating Point FPac by shifting implied bit to MSB
+_FPac_ZERO:	; FPac = 0
+_FPac_OVER:	; FPac = infinity
+_FPac_UNDER:	; FPac = 1/infinity
+_FP_SUB:	; FPac -= FParg
+_FP_ADD:	; FPac += FParg
+_FP_MUL:	; FPac *= FParg
+_FP_DIV:	; FPac /= FParg
+_ITOF8:		; FPac = (INT8) AC32
+_ITOF16:	; FPac = (INT16) AC32
+_ITOF24:	; FPac = (INT24) AC32
+_ITOF32:	; FPac = (INT32) AC32
+_NTOF8:		; FPac = - (INT8) AC32
+_NTOF16:	; FPac = - (INT16) AC32
+_NTOF24:	; FPac = - (INT24) AC32
+_NTOF32:	; FPac = - (INT32) AC32
+_UTOF8:		; FPac = (UINT8) AC32
+_UTOF16:	; FPac = (UINT16) AC32
+_UTOF24:	; FPac = (UINT24) AC32
+_UTOF32:	; FPac = (UINT32) AC32
+_FP_U32:	; (UINT32) AC32 = FPac
+_FP_I32:	; (INT32) AC32 = FPac
+_FP_SPLIT:	; Split FPac: FPac=integer, FParg=fraction, (leave all floats)
+_FP_FREXP:	; FP_FREXP(FPac) W = exponent, 0.5<=FPac< 1.0,HALF the IEEE normal 
+_FP_INVERT:	; FPac = 1.0 / FPac
+_FP_LDEXP:	; FP_LDEXP(W)	FPac.EXP += W, Add exponent W to FPac
+_FP_FMOD:	; FP_FMOD(FPac,FParg) FPac = Fraction(FPac/FParg)*FParg
+_FP_INC_AC:	; FPac += 1.0
+_FP_DEC_AC:	; FPac -= 1.0
+_FP_CEIL:	; FPac = CEIL(FPac)
+_FP_FLOOR:	; FPac = FLOOR(FPac)
+_FPac_MUL10:	; FPac *= 10  (fast!)
+_FPac_DIV10:	; FPac /= 10 (fast!)
+_FPac_DIV5:	; FPac /= 5 (fast!)
+========================================================
+File: fpfn.asm
+_POLY_FParg1:	; P += *table_ptr, P *= FParg1
+_FP_SQRT:	; FPac = SQRT(FPac)
+_FP_QUAD:	; Find 45 degree section of a circle, Assuming 45deg = 1.0
+_FP_COS:	; FPac = COS(FPac)
+_FP_SIN:	; FPac = SIN(FPc)
+_FP_TAN:	; FPac = TAN(FPac)
+_FP_ATAN:	; FPac = ATAN(FPac)
+_FP_ASIN:	; FPac = ASIN(FPac)
+_FP_ACOS:	; FPac = ACOS(FPac)
+_FP_POW:	; FPac = POW(FPac,FParg)
+_FP_IPOW:	; FPac = IPOW(FPac,ARG32)
+========================================================
+File: fpsup.asm
+_FP_KEEP_MSB:	;	Keep the N MSB bits of argument, W = n
+_FP_RESET_MSB:	; Reset the N MSB bits of argument , W = n
+_FP_KEEP_LSB:	; Keep the N LSB bits of argument, W = N
+_FP_RESET_LSB:	; Reset the N LSB bits of argument, W = N
+_FP_MKINT:	; Reset the fraction bits in FPac less or equal to radix set by W
+_FP_MKFRAC:	; Keep the fraction bits in FPac less or equal to radix set by W
+========================================================
+File: ftoa.asm
+_FPac_FAC10:	; FTOA_exp = (INT8) LOG10(FPac)
+_PUT_EXP:	;	Display FTOA_exp as Floating Point exponent [+|-]NN
+_FTOA:		; Convert FPac to ASCII
+========================================================
+File: io.asm
+_PUTC:	; Put character _PUTC_CHAR to output 
+_GETC_BYTE:	; Get character from input - raw
+_GETC:	; Get character from input and save in _GETC_BYTE
+_UNGETC:	; Unget character, Save W regsiter in _UNGETC_CHAR
+_UNGETC_RESET:	; Purge UNGETC character, see _UNGETC
+_PUTS:	; Put string pointed to by _PUTS_PTR
+_PUTS_LOOP:
+_PUTS_GETC:	; Table load byte into W pointed to by _PUTS_PTR
+_IO_DUMMY:	; Dummy I/O function that does nothing
+_DEBUG_PUTC:	; Output Charater trap used with PSIM simulator debugging
+_DEBUG_PUTCW:	; Output W, Charater trap used with PSIM simulator debugging
+_INIT_IO:	; Set default I/O functions
+========================================================
+File: picfp.asm
+_PIC_INIT:
+test0:   
+die:	
+init:
+========================================================
+File: ac32.h
+; ADD argument to AC32
+AC32_LOADI	MACRO	AA
+--
+; ADD argument to AC32 constant
+AC32_ADDI	MACRO	AA
+--
+; SUB argument from AC32
+AC32_SUBI	MACRO	AA
+--
+;	=========================================================================
+;	LOAD/STORE MACROS for AC32,ARG32,TMP32
+--
+; Load AC32
+AC32_LOAD	MACRO	AA
+--
+; Load ARG32
+ARG32_LOAD	MACRO	AA
+--
+; Load TMP32
+TMP32_LOAD	MACRO	AA
+--
+; Store AC32
+AC32_STORE	MACRO	AA
+--
+; Store ARG32
+ARG32_STORE	MACRO	AA
+--
+; Store TMP32
+TMP32_STORE	MACRO	AA
+--
+; Clear AC32
+AC32_CLR	MACRO
+--
+; COM AC32
+AC32_COM	MACRO
+--
+; DEC AC32
+AC32_DEC	MACRO
+--
+; INC AC32
+AC32_INC	MACRO
+--
+; NEG AC32
+AC32_NEG	MACRO
+--
+; AC32 = U32_MAX
+AC32_UMAX	MACRO
+--
+; AC32 = I32_MAX
+AC32_IMAX	MACRO
+--
+; AC32 = I32_MIN
+AC32_IMIN	MACRO
+--
+; Shift AC32 right towards LSB
+AC32_SH_LSB	MACRO
+--
+; Shift AC32 Left towards LSB with carry
+AC32_SH_LSBC	MACRO
+--
+; Shift AC32 left towards MSB
+AC32_SH_MSB	MACRO
+--
+; Shift AC32 left towards MSB with carry
+AC32_SH_MSBC	MACRO
+--
+; Test AC32 setiing zero status
+AC32_TST	MACRO
+--
+; ADD AC32 and ARG32
+AC32_ADD	MACRO
+--
+; ADD AC32 and ARG32 with carry
+AC32_ADDC	MACRO
+--
+; CMP AC32 and ARG32 setting status
+AC32_CMP	MACRO
+--
+; SWAP AC32 and ARG32 
+AC32_SWAP	MACRO
+--
+; SUB AC32 and ARG32
+AC32_SUB	MACRO
+--
+
+AC32_SUBB	MACRO
+--
+; I8_TO_I16() Sign extend AC32 as 8bit to 16bit number
+I8_TO_I16	MACRO
+--
+; U8_TO_I16() extend AC32 as 8bit to 16bit number
+U8_TO_U16	MACRO
+--
+; I8_TO_I32() Sign extend AC32 as 8bit to 32bit number
+I8_TO_I32	MACRO
+--
+; I16_TO_I32() Sign extend AC32 as 16bit to 32bit number
+I16_TO_I32	MACRO
+--
+; I24_TO_I32() Sign extend AC32 as 24bit to 32bit number
+I24_TO_I32	MACRO
+--
+; U8_TO_U32() extend AC32 as 8bit to 32bit number
+U8_TO_U32	MACRO
+--
+; U16_TO_U32() extend AC32 as 16bit to 32bit number
+U16_TO_U32	MACRO
+--
+; U24_TO_U32() extend AC32 as 24bit to 32bit number
+U24_TO_U32	MACRO
+--
+; N8_TO_N32() extend AC32 as negative 8bit to 32bit number
+N8_TO_N32	MACRO
+--
+; N16_TO_N32() extend AC32 as negative 16bit to 32bit number
+N16_TO_N32	MACRO
+--
+; N16_TO_N32() extend AC32 as negative 16bit to 32bit number
+N24_TO_N32	MACRO
+--
+;	=======================================================================
+;	ARG MACROS
+--
+; Shift ARG32 Left towards LSB 
+ARG32_SH_LSB	MACRO
+--
+; Shift ARG32 Left towards LSB with carry
+ARG32_SH_LSBC	MACRO
+--
+; Shift ARG32 Right towards MSB 
+ARG32_SH_MSB	MACRO
+--
+; Shift ARG32 Right towards MSB with carry
+ARG32_SH_MSBC	MACRO
+--
+; TEST ARG32 and set zero status
+ARG32_TST	MACRO
+--
+; CLEAR ARG32 
+ARG32_CLR	MACRO
+--
+;	=========================================================================
+;	TMP MACROS
+--
+; Shift TMP32 Left towards LSB 
+TMP32_SH_LSB	MACRO
+--
+; Shift TMP32 Left towards LSB with carry
+TMP32_SH_LSBC	MACRO
+--
+; Shift TMP32 Right towards MSB 
+TMP32_SH_MSB	MACRO
+--
+; Shift TMP32 Right towards MSB with carry
+TMP32_SH_MSBC	MACRO
+--
+; TEST TMP32 and set zero status
+TMP32_TST	MACRO
+--
+; CLEAR TMP32
+TMP32_CLR	MACRO
+--
+; MULTIPLY AC32 by 10
+AC32_MUL10	MACRO
+--
+; DIVIDE AC32 and ARG32 unsigned
+AC32_UDIV	MACRO
+--
+; MULTIPLY AC32 and ARG32 unsigned
+AC32_UMUL	MACRO
+========================================================
+File: atof.h
+
+ATOF	MACRO
+========================================================
+File: atoi.h
+; ATOI
+ATOI	MACRO
+--
+; SKIP white space
+SKIP_SPACES	MACRO
+--
+; Get sign
+GET_SIGN	MACRO
+--
+; Test digit in _GETC_CHAR >= '0' && <= '9'
+TEST_DIG	MACRO
+========================================================
+File: bcd32.h
+
+BCD32U	MACRO
+--
+
+BCD32	MACRO
+--
+
+BCD32_PUTS	MACRO
+--
+
+BCD32_PUTS_CNT	MACRO
+========================================================
+File: fpfn.h
+
+POLY_FParg1	MACRO
+--
+
+FP_SQRT	MACRO
+--
+
+FP_QUAD	MACRO
+--
+
+FP_TAN	MACRO
+--
+
+FP_ATAN	MACRO
+--
+
+FP_SIN	MACRO
+--
+
+FP_ASIN	MACRO
+--
+
+FP_ACOS	MACRO
+--
+
+FP_COS	MACRO
+--
+
+FP_LOG	MACRO
+--
+
+FP_EXP	MACRO
+========================================================
+File: fp.h
+; Display FP error Status Bits
+FP_ERROR	MACRO
+--
+; Clear and FP error Status Bits
+FP_CLR_ERROR	MACRO
+--
+;	LOAD IEEE32  inline
+IEEE_LOADI	MACRO	FP, arg
+--
+;	LOAD FPac with TEMP REAL pointed to by AA
+TRac_LOAD	MACRO	AA
+--
+;	STORE FPac with TEMP REAL pointed to by AA
+TRac_STORE	MACRO	AA
+--
+;	LOAD FParg with TEMP REAL pointed to by AA
+TRarg_LOAD	MACRO	AA
+--
+;	STORE FParg with TEMP REAL pointed to by AA
+TRarg_STORE	MACRO	AA
+--
+;	=======================================================================
+IEEE_TO_TRac	MACRO
+--
+
+TRac_TO_IEEE	MACRO
+--
+
+IEEE_TO_TRarg	MACRO
+--
+
+TRarg_TO_IEEE	MACRO
+--
+;	=======================================================================
+FPac_SWAP	MACRO
+--
+
+FPac_CLR	MACRO
+--
+
+FPac_ONE	MACRO
+--
+
+FParg_CLR	MACRO
+--
+
+FParg_ONE	MACRO
+--
+
+FPac_TST	MACRO
+--
+	ENDM
+FParg_TST	MACRO
+--
+	ENDM
+FP_CMP	MACRO
+--
+
+FPac_RND	MACRO
+--
+
+FPac_INC_EXP	MACRO
+--
+
+FPac_DEC_EXP	MACRO
+--
+
+FPac_NORM	MACRO
+--
+
+FPac_ZERO	MACRO
+--
+
+FPac_OVER	MACRO
+--
+
+FP_ALIGN	MACRO
+--
+
+FP_SUB	MACRO
+--
+
+FP_ADD	MACRO
+--
+;   AC32 += ARG32, renormalize on overflow, inlined to save stack
+AC32_ADD_NORMAL	MACRO
+--
+
+FP_MUL	MACRO
+--
+
+FP_DIV	MACRO
+--
+
+ITOF8	MACRO
+--
+	ENDM
+ITOF16	MACRO
+--
+	ENDM
+ITOF24	MACRO
+--
+	ENDM
+ITOF32	MACRO
+--
+	ENDM
+NTOF8	MACRO
+--
+	ENDM
+NTOF16	MACRO
+--
+	ENDM
+NTOF24	MACRO
+--
+	ENDM
+NTOF32	MACRO
+--
+	ENDM
+UTOF8	MACRO
+--
+	ENDM
+UTOF16	MACRO
+--
+	ENDM
+UTOF24	MACRO
+--
+	ENDM
+UTOF32	MACRO
+--
+	ENDM
+FP_U32	MACRO
+--
+	ENDM
+FP_I32	MACRO
+--
+	ENDM
+FP_I32_MAX	MACRO
+--
+	ENDM
+FP_I32_MIN	MACRO
+--
+	ENDM
+FP_SPLIT	MACRO
+--
+	ENDM
+FP_FREXP	MACRO
+--
+	ENDM
+FP_INVERT	MACRO
+--
+	ENDM
+FP_LDEXP	MACRO
+--
+	ENDM
+FP_FMOD	MACRO
+--
+	ENDM
+FP_INC_AC	MACRO
+--
+	ENDM
+FP_DEC_AC	MACRO
+--
+	ENDM
+FP_CEIL	MACRO
+--
+	ENDM
+FP_FLOOR	MACRO
+--
+;	=====================================================================
+FPac_MUL5	MACRO
+--
+
+FPac_MUL10	MACRO
+--
+
+FPac_DIV5	MACRO
+--
+
+FPac_DIV10	MACRO
+========================================================
+File: fpsup.h
+	
+FP_KEEP_MSB	MACRO
+--
+	ENDM
+FP_RESET_MSB	MACRO
+--
+	ENDM
+FP_KEEP_LSB	MACRO
+--
+	ENDM
+FP_RESET_LSB	MACRO
+--
+	ENDM
+FP_MKINT	MACRO
+--
+	ENDM
+FP_MKFRAC	MACRO
+========================================================
+File: ftoa.h
+
+FPac_FAC10	MACRO
+--
+
+PUT_EXP	MACRO
+--
+	ENDM
+FTOA	MACRO
+========================================================
+File: io.h
+; Set a user defined output FUNCTION
+SET_PUTC	MACRO	ADDRESS
+--
+; Set a user defined input FUNCTION
+SET_GETC	MACRO	ADDRESS
+--
+; Set I/O pointers to defaults states priot to user setup
+INIT_IO	MACRO
+--
+;	Debugger macros
+GETC MACRO
+--
+
+UNGETC MACRO	ARG
+--
+
+UNGETC_RESET MACRO
+--
+
+PUTCI	MACRO	ARG
+--
+
+PUTC	MACRO	ARG
+--
+
+PUTS	MACRO	STR
+--
+	ENDM
+PUT_NL	MACRO
+--
+
+PUTCW	MACRO
+--
+
+DB_PUTCI	MACRO ARG
+--
+
+DB_PUTCW	MACRO
+========================================================
+File: macro.h
+;	========================================================================
+#ifndef	MACRO_H
+#define	MACRO_H
+--
+	cblock
+	MACRO_tmp1
+--
+;	SET A BIT:	MEM,BIT
+BSET	MACRO MEM,BIT
+--
+;	CLEAR A BIT:  MEM,BIT
+BCLR	MACRO MEM,BIT
+--
+;	Clear Borrow STatus
+CLRB	MACRO 
+--
+;	Set Borrow Status
+SETB	MACRO 
+--
+;	Clear Z Status
+;CLRZ	MACRO 
+--
+;	Set Z Status
+;SETZ	MACRO 
+--
+;	Clear Carry Status
+;CLRC	MACRO
+--
+;	Set Carry Status
+;SETC	MACRO
+--
+;	Skip Bit Set: MEM,BIT
+SKIP_BSET	MACRO MEM,BIT
+--
+;	Skip Bit Clear:	MEM,BIT
+SKIP_BCLR	MACRO MEM, BIT
+--
+;	Skip Not Zero
+SKIP_NZ	MACRO
+--
+;	Skip Zero
+SKIP_Z	MACRO
+--
+;	Skip Not Carry
+SKIP_NC	MACRO
+--
+;	Skip Carry
+SKIP_C	MACRO
+--
+;	SKip Not Borrow
+SKIP_NB	MACRO
+--
+;	Skip Borrow
+SKIP_B	MACRO
+--
+;	Jump: TARGET
+JMP	MACRO TARGET
+--
+;	Call Subroutine:	TARGET
+;	CALL MACRO   TARGET
+--
+;	Return 8bit CONSTANT
+RET8I	MACRO const
+--
+;	End Subroutine
+ENDSUB	MACRO
+--
+;	Jump Zero:	TARGET
+JMP_Z	MACRO TARGET
+--
+;	Jump Not Zero:	TARGET
+JMP_NZ	MACRO TARGET
+--
+;	Jump Carry:   TARGET
+JMP_C	MACRO	TARGET
+--
+;	Jump Not Carry:	TARGET
+JMP_NC	MACRO TARGET
+--
+;	JUMP IF STATUS BORROW: TARGET
+JMP_B	MACRO TARGET
+--
+;	Jump Not Borrow: TARGET
+JMP_NB	MACRO TARGET
+--
+;	Jump Bit Set: MEM,BIT,TARGET
+JMP_BSET	MACRO MEM,BIT, TARGET
+--
+;	Jump Bit Clear:	MEM,BIT,TARGET
+JMP_BCLR	MACRO MEM,BIT, TARGET
+--
+;	Move 8bit Memory, 8bit Memory: TO,FROM
+MOV8	MACRO TO,FROM
+--
+;	LOAD 8bit Memory, 8bit CONSTANT:   MEM,CONSTANT
+LOAD8I	MACRO MEM,const
+--
+;	SWAP 8bit Memory Locations: TO,FROM
+SWAP8	MACRO TO,FROM
+--
+;	Clear 8bit Memory:	MEM
+CLR8	MACRO MEM
+--
+;	Compliment 8bit Memory:	MEM
+COM8	MACRO MEM
+--
+;	DEC 8bit Memory:	MEM
+DEC8	MACRO MEM
+--
+;	INC 8bit Memory:	MEM
+INC8	MACRO MEM
+--
+;	NEG 8bit Memory:	MEM
+NEG8	MACRO MEM
+--
+;	ROTATE RIGHT 8bit Memory (towards LSB): MEM
+RR8_LSB	MACRO MEM
+--
+;	ROTATE LEFT 8bit Memory (towards MSB):	MEM
+RL8_MSB	MACRO MEM
+--
+;	SHIFT RIGHT 8bit Memory (towards LSB):	MEM
+SH8_LSB	MACRO MEM
+--
+;	SHIFT RIGHT 8bit Memory ARITHMETIC (towards LSB):	MEM
+ASH8_LSB	MACRO MEM
+--
+;	SHIFT LEFT 8bit Memory (towards MSB): MEM
+SH8_MSB	MACRO MEM
+--
+;	AND 8bit Memory with 8bit Memory:	TO,FROM
+AND8	MACRO TO,FROM
+--
+;	AND 8bit Memory with 8bit CONSTANT:   TO,CONSTANT
+AND8I	MACRO TO,const
+--
+;	OR 8bit Memory with 8bit Memory:	TO,FROM
+OR8	MACRO TO,FROM
+--
+;	OR 8bit Memory with 8bit CONSTANT:	TO,CONSTANT
+OR8I	MACRO TO,const
+--
+;	XOR 8bit Memory with 8bit Memory:	TO,FROM
+XOR8	MACRO TO,FROM
+--
+;	XOR 8bit Memory with 8bit CONSTANT:   TO,CONSTANT
+XOR8I	MACRO TO,const
+--
+;	ADD 8bit Memory with 8bit Memory:	TO,FROM
+ADD8	MACRO TO,FROM
+--
+;	ADD 8bit Memory with 8bit CONSTANT:   TO,CONSTANT
+ADD8I	MACRO TO,const
+--
+;	ADD 8bit Memory with 8bit Memory with Carry:  TO,FROM
+ADDC8	MACRO TO,FROM
+--
+;	ADD 8bit Memory with 8bit CONSTANT with Carry:	TO,CONSTANT
+ADDC8I	MACRO	TO,const
+--
+;	SUB 8bit Memory with 8bit Memory:	TO,FROM
+SUB8	MACRO TO,FROM
+--
+;	SUB 8bit Memory with 8bit Memory with Borrow: TO,FROM
+SUBB8	MACRO TO,FROM
+--
+;	SUB 8bit Memory with 8bit CONSTANT:   TO,CONSTANT
+SUB8I	MACRO TO,const
+--
+;	SUB 8bit Memory with 8bit CONSTANT with Borrow:	TO,CONSTANT
+SUBB8I	MACRO TO,const
+--
+;	CMP Unsigned 8bit Memory with 8bit Memory - using Borrow Logic: TO,FROM
+CMP8	MACRO TO,FROM
+--
+;	CMP Unsigned 8bit Memory with 8bit CONSTANT - Borrow Logic: TO,CONSTANT
+CMP8I	MACRO TO,const
+--
+;	CMP Signed 8bit Memory with 8bit Memory - Borrow Logic: TO,FROM
+SCMP8	MACRO	TO,FROM
+--
+	xorlw 0x80
+	movwf MACRO_tmp1
+--
+	xorlw 0x80
+	subwf MACRO_tmp1,W	; MACRO_tmp1=AC^0x80, MACRO_tmp1-(W^0x80)
+--
+;	CMP Signed 8bit Memory with 8bit CONSTANT - using Borrow Logic: TO,FROM
+SCMP8I	MACRO	TO,const
+--
+	xorlw 0x80
+	movwf MACRO_tmp1
+	movlw	(const) ^ 0x80
+	subwf MACRO_tmp1,w
+--
+;	|TO| >= |FROM|
+SET_GE	MACRO
+--
+;	|TO| >= |FROM|
+SET_P	MACRO
+--
+;	|TO| > |FROM|
+SET_G	MACRO
+--
+;	|TO| <= |FROM|
+SET_LE	MACRO
+--
+;	|TO| < |FROM|
+SET_L	MACRO
+--
+;	|TO| < |FROM|
+SET_N	MACRO
+--
+;	|TO| >= |FROM|
+JMP_GE	MACRO TARGET
+--
+;	|TO| >= |FROM|	TO - FROM >= 0
+JMP_P	MACRO TARGET
+--
+;	|TO| > |FROM|
+JMP_G	MACRO TARGET
+--
+;	|TO| <= |FROM|
+JMP_LE	MACRO TARGET
+--
+;	|TO| < |FROM|
+JMP_L	MACRO TARGET
+--
+;	|TO| < |FROM|	TO - FROM < 0
+JMP_N	MACRO TARGET
+--
+;	TEST 8bit Memory - set Zero / Non Zero status: MEM
+TST8	MACRO	MEM
+--
+;	Increment 8bit Memory Jump Not Zero: MEM
+IJNZ8	MACRO MEM,TARGET
+--
+;	Increment 8bit Memory Jump Zero:	MEM
+IJZ8	MACRO MEM,TARGET
+--
+;	Decrement 8bit Memory Jump Not Zero:  MEM
+DJNZ8	MACRO MEM,TARGET
+--
+;	Decrement 8bit Memory Jump Zero:	MEM
+DJZ8	MACRO MEM,TARGET
+--
+;	CLR Memory:   MEM,COUNT
+IN_CLR	MACRO MEM, count
+--
+;	MOVE Memory TO,FROM,COUNT:	TO,FROM,COUNT
+IN_MOV	MACRO TO,FROM, count
+--
+;	SWAP Memory TO,FROM,COUNT:	TO,FROM,COUNT
+IN_SWAP	MACRO TO, FROM, count
+--
+;	MOVE Memory IMMEDIATE TO,CONSTANT,COUNT:	TO,CONSTANT,COUNT
+IN_LOADI	MACRO TO, const, count
+--
+;	TEST Memory   MEM,COUNT for Zero / Non Zero:  MEM,COUNT
+IN_TST	MACRO MEM, count
+--
+;	COMPARE Memory UNSIGNED Set Status:  TO,FROM,COUNT
+IN_CMP	MACRO TO,FROM, count
+--
+;	COMPARE Memory IMMEDIATE - Set Status: SIGNED TO,FROM,CONSTANT
+IN_SCMP	MACRO TO,FROM, count
+--
+;	COMPARE Memory IMMEDIATE UNSIGNED Set Status:  TO,CONSTANT,COUNT
+IN_CMPI	MACRO TO, const, count
+--
+;	COMPARE Memory IMMEDIATE SIGNED Set Status: MEM,CONSTANT,COUNT
+IN_SCMPI	MACRO MEM,const, count
+--
+;	ADD Memory:   TO,FROM, COUNT
+IN_ADD	MACRO TO,FROM, count
+--
+;	ADD Memory with Carry: TO,FROM,COUNT
+IN_ADDC	MACRO TO,FROM, count
+--
+;	SUB Memory: TO,FROM,COUNT
+IN_SUB	MACRO TO,FROM, count
+--
+;	SUB Memory with Borrow: TO,FROM,COUNT
+IN_SUBB	MACRO TO,FROM, count
+--
+;	ADD Memory: MEM,CONSTANT,COUNT
+IN_ADDI	MACRO MEM, const, count
+--
+;	SUB Memory: MEM,CONSTANT,COUNT
+IN_SUBI	MACRO	MEM,const, count
+--
+;	INC Memory: MEM,COUNT
+IN_INC	MACRO MEM, count
+--
+;	DEC Memory: MEM,COUNT
+IN_DEC	MACRO	MEM, count
+--
+;	AND Memory: TO,FROM,COUNT
+IN_AND	MACRO TO,FROM, count
+--
+;	OR Memory: TO,FROM,COUNT
+IN_OR	MACRO TO,FROM, count
+--
+;	XOR Memory: TO,FROM,COUNT
+IN_XOR	MACRO TO,FROM, count
+--
+;	COM Memory: MEM,COUNT
+IN_COM	MACRO MEM, count
+--
+;	NEG Memory: MEM,COUNT
+IN_NEG	MACRO MEM,count
+--
+;	Shift Memory Towards LSB: MEM,COUNT
+IN_SH_LSB	MACRO MEM, count
+--
+;	Shift Memory Towards LSB with Carry: MEM,COUNT
+IN_SH_LSBC	MACRO	MEM, count
+--
+;	Shift Memory Towards MSB: MEM,COUNT
+IN_SH_MSB	MACRO	MEM, count
+--
+;	Shift Memory Towards MSB with Carry: MEM,COUNT
+IN_SH_MSBC	MACRO MEM, count
+--
+;	INC 16Bit Memory:	MEM
+INC16	MACRO MEM
+--
+;	DEC 16Bit Memory: MEM
+DEC16	MACRO MEM
+--
+;	NEG 16Bit Memory: MEM
+NEG16	MACRO	MEM
+--
+;	TST 16Bit Memory MEM
+TST16	MACRO MEM
+--
+;	CMP 16Bit Memory: TO,FROM
+CMP16	MACRO TO,FROM
+--
+;	CMP 16Bit Memory:MEM,CONSTANT
+CMP16I	MACRO MEM,const
+--
+;	ADD 16Bit Memory: TO,FROM
+ADD16	MACRO TO,FROM
+--
+;	ADD 16Bit Memory: MEM,CONSTANT
+ADD16I	MACRO MEM,const
+--
+;	SUB 16Bit Memory: TO,FROM
+SUB16	MACRO TO,FROM
+--
+;	SUB 16Bit Memory: MEM,CONSTANT
+SUB16I	MACRO MEM,const
+--
+;	MOV 16Bit Memory:  TO,FROM
+MOV16	MACRO TO,FROM
+--
+;	MOV 16Bit Memory: MEM,CONSTANT
+LOAD16I	MACRO MEM,const
+--
+;	Move Memory 8Bit to 16bit Unsigned: TO,FROM
+MOV8_16U	MACRO TO,FROM
+--
+;	Extend 8Bit Memory to 16bit Memory: Signed MEM
+I8TO16	MACRO MEM
+--
+;	Extend 8Bit Memory to 16bit Memory Unsigned: MEM
+U8TO16	MACRO MEM
+--
+;	SUB 8bit Memory from 16bit Memory Unsigned:  TO,FROM
+SUB8_16U	MACRO TO,FROM
+--
+;	ADD 8bit Memory TO 16bit Memory Unsigned:	TO,FROM
+ADD8_16U	MACRO TO,FROM
+--
+;	CMP 8bit Memory with 16bit Memory Unsigned: TO,FROM
+CMP8_16U	MACRO TO,FROM
+--
+
+FOR		MACRO	LOOPVAR,STARTING,ENDING
+--
+
+BREAK MACRO
+--
+
+NEXT	MACRO	LOOPVAR,STEP
+--
+
+IFBIT_SET	MACRO	VAR,BIT
+--
+
+ELSEIF MACRO
+--
+
+IFBIT_CLR	MACRO	VAR,BIT
+--
+
+;ENDIF	MACRO
+--
+;	========================================================================
+;	MACRO_H
+========================================================
+File: math.h
+========================================================
+File: math_tab.h
+========================================================
+File: mem.h
+;	===========================================================
+IN_MOV_MAC	MACRO	TO,FROM,count
+========================================================
+File: stack.h
+
+PUSHW	MACRO	
+--
+
+POPW	MACRO
+========================================================
+File: table0.h
+; TABLE0_LD - Load Memory from table0
+TABLE0_LD	MACRO	target
+--
+
+AC32_TABLE0_LD	MACRO const
+--
+	
+ARG32_TABLE0_LD	MACRO	const
+--
+;	FPac_TR = ROM
+TRac_TABLE0_LD	MACRO const
+--
+;	FParg_TR = ROM
+TRarg_TABLE0_LD	MACRO	const
+--
+;	FPac_TR = IEEE32_TO_TR(AC32)
+FPac_TABLE0_LD	MACRO const
+--
+;	FParg = IEEE32_TO_TR(ARG32)
+FParg_TABLE0_LD	MACRO	const
+========================================================
+File: table.h
+;
+;	TABLE MACROS and functions: Load memory from CONSTANT ROM
+--
+; Set table target address (ram)  - not modified after transfer
+TABLE_SET_TARGET	MACRO arg
+--
+; Set table source address (rom)  - points past table after transfer
+TABLE_SET_SOURCE	MACRO	const
+--
+; Set table size (bytes to transfer) - not modified after transfer
+TABLE_SET_SIZE	MACRO arg
+--
+; Table transfer using previously set target,source and size - target modified
+TABLE_LD	MACRO
+--
+; Table transfer to W, W = rom[table_ptr]
+TABLE_LD_MEM	MACRO TO
+--
+; TABLE_MAKE - build suplimentary jump table for tables larger then 256bytes
+TABLE_MAKE_SUP	MACRO lable, tab_start, tab_end
+--
+; TABLE_LD_SUP - Load Memory from table accessed with TABLE_MAKE_SUP
+TABLE_LD_SUP   MACRO   lable,target
+========================================================
+File: tablesup.h
+; Table load TRac FP with temporary real 40bit
+TRac_TABLE_LD	MACRO const
+--
+; Table load TRarg FP with temporary real 40bit
+TRarg_TABLE_LD	MACRO const
+--
+; Table load FPac with 32bit IEEE float
+FPac_TABLE_LD	MACRO const
+--
+; Table load FParg with 32bit IEEE float
+FParg_TABLE_LD	MACRO const
+--
+; Table load AC with 32bit number
+AC32_TABLE_LD	MACRO	const
+--
+; Table load ARG with 32bit number
+ARG32_TABLE_LD	MACRO	const
+--
+; Set table target TRac and size for 40bit temprary real
+TABLE_SET_TRac MACRO
+--
+; Set table target TRarg and size for 40bit temprary real
+TABLE_SET_TRarg MACRO
+--
+; Set table target AC32 and size for 32bit 
+TABLE_SET_AC32 MACRO 
+--
+; Set table target ARG32 and size for 32bit temprary 
+TABLE_SET_ARG32 MACRO 

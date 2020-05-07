@@ -1,0 +1,30 @@
+make[1]: Entering directory '/share/embedded/math/PICFLOAT/MATH/picfloat/tests'
+cp -f ../picfp.lst .
+cp -f ../picfp.hex .
+cp -f psim-0.4/psim .
+./GETSYMS picfp.lst picfp.h
+./psim picfp.hex <cmds
+     0  0000: goto    07cd    W=00  S=........  TMR0=00
+> Input:  -1.23456789e+12
+Result:-1.23456789E+12
+Input: +0.12e+12
+Result: 1.20000000E+11
+Input: -0.12e-12
+Result:-1.20000001E-13
+Input: 3.4e38
+Result: 3.40000006E+38
+Input: 1e39
+Result: 6.80564763E+38
+Input: 1.2e-38
+Result: 1.20000003E-38
+Input: 1e-38
+Result: 1.17549434E-38
+Input: -0e-0
+Result:-0.00000000E+00
+Input: 0e-40
+Result: 0.00000000E+00
+Input: +0
+Result: 0.00000000E+00
+halted
+294764  07fe: nop             W=1a  S=......DC  TMR0=dd
+> make[1]: Leaving directory '/share/embedded/math/PICFLOAT/MATH/picfloat/tests'

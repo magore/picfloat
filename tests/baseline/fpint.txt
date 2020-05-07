@@ -1,0 +1,80 @@
+num:2.0971510000e+06,int:2.0971510000e+06,frac:0.0000000000e+00
+cycles:      575, Stack depth:3
+num:1.0485755000e+06,int:1.0485750000e+06,frac:5.0000000000e-01
+cycles:      604, Stack depth:3
+num:5.2428775000e+05,int:5.2428700000e+05,frac:7.5000000000e-01
+cycles:      636, Stack depth:3
+num:2.6214387500e+05,int:2.6214300000e+05,frac:8.7500000000e-01
+cycles:      668, Stack depth:3
+num:1.3107193750e+05,int:1.3107100000e+05,frac:9.3750000000e-01
+cycles:      700, Stack depth:3
+num:6.5535968750e+04,int:6.5535000000e+04,frac:9.6875000000e-01
+cycles:      732, Stack depth:3
+num:3.2767984375e+04,int:3.2767000000e+04,frac:9.8437500000e-01
+cycles:      764, Stack depth:3
+num:1.6383992188e+04,int:1.6383000000e+04,frac:9.9218750000e-01
+cycles:      796, Stack depth:3
+num:8.1919960938e+03,int:8.1910000000e+03,frac:9.9609375000e-01
+cycles:      828, Stack depth:3
+num:4.0959980469e+03,int:4.0950000000e+03,frac:9.9804687500e-01
+cycles:      860, Stack depth:3
+num:2.0479990234e+03,int:2.0470000000e+03,frac:9.9902343750e-01
+cycles:      892, Stack depth:3
+num:1.0239995117e+03,int:1.0230000000e+03,frac:9.9951171875e-01
+cycles:      924, Stack depth:3
+num:5.1199975586e+02,int:5.1100000000e+02,frac:9.9975585938e-01
+cycles:      956, Stack depth:3
+num:2.5599987793e+02,int:2.5500000000e+02,frac:9.9987792969e-01
+cycles:      988, Stack depth:3
+num:1.2799993896e+02,int:1.2700000000e+02,frac:9.9993896484e-01
+cycles:     1020, Stack depth:3
+num:6.3999969482e+01,int:6.3000000000e+01,frac:9.9996948242e-01
+cycles:     1052, Stack depth:3
+num:3.1999984741e+01,int:3.1000000000e+01,frac:9.9998474121e-01
+cycles:     1084, Stack depth:3
+num:1.5999992371e+01,int:1.5000000000e+01,frac:9.9999237061e-01
+cycles:     1116, Stack depth:3
+num:7.9999961853e+00,int:7.0000000000e+00,frac:9.9999618530e-01
+cycles:     1148, Stack depth:3
+num:3.9999980927e+00,int:3.0000000000e+00,frac:9.9999809265e-01
+cycles:     1180, Stack depth:3
+num:1.9999990463e+00,int:1.0000000000e+00,frac:9.9999904633e-01
+cycles:     1212, Stack depth:3
+num:9.9999952316e-01,int:0.0000000000e+00,frac:9.9999952316e-01
+cycles:      127, Stack depth:2
+num:4.9999976158e-01,int:0.0000000000e+00,frac:4.9999976158e-01
+cycles:      129, Stack depth:2
+num:2.4999988079e-01,int:0.0000000000e+00,frac:2.4999988079e-01
+cycles:      129, Stack depth:2
+num:1.2499994040e-01,int:0.0000000000e+00,frac:1.2499994040e-01
+cycles:      129, Stack depth:2
+num:6.2499970198e-02,int:0.0000000000e+00,frac:6.2499970198e-02
+cycles:      129, Stack depth:2
+num:3.1249985099e-02,int:0.0000000000e+00,frac:3.1249985099e-02
+cycles:      129, Stack depth:2
+num:1.5624992549e-02,int:0.0000000000e+00,frac:1.5624992549e-02
+cycles:      129, Stack depth:2
+num:7.8124962747e-03,int:0.0000000000e+00,frac:7.8124962747e-03
+cycles:      129, Stack depth:2
+num:3.9062481374e-03,int:0.0000000000e+00,frac:3.9062481374e-03
+cycles:      129, Stack depth:2
+num:1.9531240687e-03,int:0.0000000000e+00,frac:1.9531240687e-03
+cycles:      129, Stack depth:2
+num:9.7656203434e-04,int:0.0000000000e+00,frac:9.7656203434e-04
+cycles:      129, Stack depth:2
+num:4.8828101717e-04,int:0.0000000000e+00,frac:4.8828101717e-04
+cycles:      129, Stack depth:2
+num:2.4414050858e-04,int:0.0000000000e+00,frac:2.4414050858e-04
+cycles:      129, Stack depth:2
+num:1.2207025429e-04,int:0.0000000000e+00,frac:1.2207025429e-04
+cycles:      129, Stack depth:2
+num:6.1035127146e-05,int:0.0000000000e+00,frac:6.1035127146e-05
+cycles:      129, Stack depth:2
+num:3.0517563573e-05,int:0.0000000000e+00,frac:3.0517563573e-05
+cycles:      129, Stack depth:2
+num:1.5258781787e-05,int:0.0000000000e+00,frac:1.5258781787e-05
+cycles:      129, Stack depth:2
+num:7.6293908933e-06,int:0.0000000000e+00,frac:7.6293908933e-06
+cycles:      129, Stack depth:2
+num:3.8146954466e-06,int:0.0000000000e+00,frac:3.8146954466e-06
+cycles:      129, Stack depth:2
