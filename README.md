@@ -1,6 +1,6 @@
 # picfloat
   * PICFLOAT is a open source floating point library for midrange PIC processors from Microchip
-This is a clone of my SourceForge.txt with some recent updates
+This is a clone of my SourceForge project txt with some minor recent updates
    
 ___
 
