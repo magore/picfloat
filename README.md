@@ -55,12 +55,12 @@ ___
   Email:       magore@sympatico.ca - or - magore@uwaterloo.ca
 
 ## PIC Floating point library
-This is a floating point library that I have been working a bit at
+  * This is a floating point library that I have been working a bit at
 a time over the last 12 years. My original goal was to make the
 library as small as possible and to form the core of an interpreter.
-As a result <b>there is no bank select code<b> all code and data fit within a single bank
+As a result <b>there is no bank select code</b> all code and data fit within a single bank
 
-Many of the functions names are chosen from their C counter parts. All 
+  * Many of the functions names are chosen from their C counter parts. All 
 floating point calculations are done to 40bits (actually 8bit exponent, 
 1bit sign and 32bit mantissa).  The user can load and store either these 
 40bit numbers or use IEEE32 bit format to save space. Although targeted 
@@ -70,7 +70,8 @@ FSR/IND and table operation can be very simply modified for most other
 processors 
 
 ### Testing
-The basic math functions have been tested against PARANOIA by passing values back and forth using a PIC simulator. This does not guarantee there are not any bugs - please feel free to report and or fix any bugs you may find.
+  * The basic math functions have been tested against PARANOIA. PARANOIA used calls to the PIC simulator to test the PIC math functions. This allowed the use of a complext testing environment written in C to verify the results against the simulated PIC.
+  * This does not guarantee there are not any bugs - please feel free to report and or fix any bugs you may find.
 
 ___
 
