@@ -12,6 +12,7 @@ ___
     separate copyright - Please read the file for more details
 
 
+### License: BSD
 ### Copyright
  * Copyright (C) 1991,1997,1998,1999,2000,2001,2002,2003 Mike Gore All rights reserved.
  
@@ -54,12 +55,12 @@ ___
   N2L 5N4
   Email:       magore@sympatico.ca - or - magore@uwaterloo.ca
 
-## PIC Floating point library
-  * This is a floating point library that I have been working a bit at
-a time over the last 12 years. My original goal was to make the
-library as small as possible and to form the core of an interpreter.
-As a result <b>there is no bank select code</b> all code and data fit within a single bank
+## PIC Floating point library - PIC Assembler code
+### Background
+I started working on this project back in 1990. I started with a macro library to make using the PIC easier to use. I felt that having a generic base of multi-byte functions would allow making math libraries mush easier to do. I had the floating point core written in 1991. The project was revisited over the years to include most of the common C floating point math functions. I had planned to have the library as part of an interpreter with the higher level functions and data kept in NVRAM. This has much to do with why there is <b>no banking code in this project</b> (It would be easy to have this code and a small interpreter fit inside of 2K code if many of the functions were moved to NVRAM)
 
+
+### Overview
   * Many of the functions names are chosen from their C counter parts. All 
 floating point calculations are done to 40bits (actually 8bit exponent, 
 1bit sign and 32bit mantissa).  The user can load and store either these 
@@ -69,9 +70,83 @@ machine dependent assumptions are kept to MACRO.H and the remaining W,
 FSR/IND and table operation can be very simply modified for most other 
 processors 
 
+___
+
 ### Testing
   * The basic math functions have been tested against PARANOIA. PARANOIA used calls to the PIC simulator to test the PIC math functions. This allowed the use of a complext testing environment written in C to verify the results against the simulated PIC.
-  * This does not guarantee there are not any bugs - please feel free to report and or fix any bugs you may find.
+  * I have run this code against the PARANOIA test suite by Steve Moshier using a modified version of the PIC simulator PSIM by Eric Smith See support links
+
+### Format: IEEE 32bit single and 40bit format 
+  * 8bit signed exponent,32bit mantissa, 1bit sign 
+  * Calculations are done in 40bit format including trig,log, etc
+
+### Main features
+  * small size - all of it - and testing code fits inside 2K code!
+  * heavy use of macros (over 300) makes code readable and portable
+  * only assume one 8bit register called W (easy to change) - and limited use of an  index register
+  * testing is done with paranoia math test suite
+
+### Target PIC Processors: 14bit processors (initial port)
+
+### Support Utilities
+   * Includes programs to generate tables or constants from floating point numbers that can be included in assembler code
+
+___
+
+### Details
+#### Macros
+  * Define all core multibyte functions (1 to N byte size!) to make building function easy
+  * Arithmetic, Logical, Shifts, Compares, Load (Direct and Constant), Store, Bit Operations, Looping, Increment, Decrement, Jumps
+  * Macros are also used to invoke all function calls (for readability and mainly to allow modification of calling methods on various PICs)
+#### 32bit math
+  * 32bit integer functions based on macro headers including Multiply, Divide, Conversions to/from 8, 16, 24 and 32bit signed/unsigned values
+I/O: 32bit BCD: convert up to 32bit numbers to BCD and output results in ASCII, ATOI convert ASCII to 32bit
+#### Floating point core
+  * Conversions (IEEE to/from 40bit temporary real) Load/Store ( to/from IEEE or 40bit temporary real)  Arithmetic, Increment, Decrement,
+  * Conversions (to/from 8, 16, 24, 32bit integers signed/unsigned)
+#### Floating point functions
+  * Poly, Sqrt, Sin, Cos, Tan, Asin, Acos, Atan, Log, Exp, Pow, Test (Zero/Nonzero), Split(Real,Integer), Floor, Ceil, LDEXP, FREXP, FMOD, INVERT(1/X)
+#### Floating Point I/O
+  * FTOA - Binary to ASCII floating and  ATOF ASCII to floating conversions supporting scientific notation
+#### Table functions
+  * 32bit math, 40 and 32bit Floating point load
+#### Memory functions
+  * memory copy
+#### PIC banking code
+  * <b>there is no bank select code</b> all code and data fit within a single bank
+
+#### AND MUCH MORE!
+
+
+### Wish List
+  * I hope others can work on and expand on this project. Some ideas for areas improvement could be Some method to compile in only functions that are used
+
+  * perhaps a preprocessor stage.  Use of index register for argument passing and computations
+  * Add a stack
+  * Better error reporting
+  * Consider alternate range reduction methods for TRIG functions
+  * Add statistical testing for host/simulator testing of TRIG,LOG,EXP functions
+  * We compute the mantissa to 32bits so add double support to host testing functions - the float limit hides much of the real accuracy of the functions 
+
+### Comments
+  * I believe that prior to this project that PIC assembler support for floating point functions, and good macro support in general, has been seriously lacking.
+  * Keep in mind the limited numeric resolution resulting from the number formats themselves when doing computations! Take a small number, say delta, and add another number that is larger in magnitude by 2**(bits of precision) - the delta contribution is lost.. A good example of this problem occurs when passing two angles near 90 degrees that differ by a small ammont - if you are depending on measuring small changes in these angles your results will  have large unexpected errors - so take time to understand this limit and rework your computations as required. No amount of design given to a mathematical functions can compensate from being badly used. (But please feel free to fix any bugs you may find in my code 8-)
+
+___
+
+### Misc
+  * If anyone is interested in tools to make interpreters I would suggest using the COCOR compiler construction toolset by Frankie Arzu
+  * comes with easy to use examples
+
+
+### Support Links
+
+  * PARANOIA - Steve Moshiers home page
+  * PSIM  Source Forge
+  * GPUTILS - Source Forge
+  * http://www.moshier.net
+  * http://sourceforge.net/projects/psim
+  * http://gputils.sourceforge.net/
 
 ___
 
