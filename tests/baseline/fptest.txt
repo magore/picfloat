@@ -1240,7 +1240,7 @@ SIN(-353.0000000000)==+1.21869345e-01, AbsErr: -1.44119737e-09, RelBits=+26.33
 cycles:    23532, Stack depth:5
 SIN(-352.0000000000)==+1.39173101e-01, AbsErr: -4.40890630e-10, RelBits=+28.23
 cycles:    23576, Stack depth:5
-SIN(-351.0000000000)==+1.56434467e-01, AbsErr: -2.31316130e-09, RelBits=+26.01
+SIN(-351.0000000000)==+1.56434467e-01, AbsErr: -2.31316127e-09, RelBits=+26.01
 cycles:    23202, Stack depth:5
 SIN(-350.0000000000)==+1.73648182e-01, AbsErr: -4.17012083e-09, RelBits=+25.31
 cycles:    23131, Stack depth:5
@@ -1348,7 +1348,7 @@ SIN(-299.0000000000)==+8.74619707e-01, AbsErr: -3.25775740e-10, RelBits=+31.32
 cycles:    23313, Stack depth:5
 SIN(-298.0000000000)==+8.82947594e-01, AbsErr: -1.06845632e-09, RelBits=+29.62
 cycles:    23333, Stack depth:5
-SIN(-297.0000000000)==+8.91006525e-01, AbsErr: -4.86226504e-10, RelBits=+30.77
+SIN(-297.0000000000)==+8.91006525e-01, AbsErr: -4.86226392e-10, RelBits=+30.77
 cycles:    23133, Stack depth:5
 SIN(-296.0000000000)==+8.98794048e-01, AbsErr: -1.23529875e-09, RelBits=+29.44
 cycles:    23193, Stack depth:5
@@ -2536,7 +2536,7 @@ SIN(295.0000000000)==-9.06307788e-01, AbsErr: +1.06344367e-09, RelBits=+29.67
 cycles:    23112, Stack depth:5
 SIN(296.0000000000)==-8.98794048e-01, AbsErr: +1.23529875e-09, RelBits=+29.44
 cycles:    23192, Stack depth:5
-SIN(297.0000000000)==-8.91006525e-01, AbsErr: +4.86226504e-10, RelBits=+30.77
+SIN(297.0000000000)==-8.91006525e-01, AbsErr: +4.86226392e-10, RelBits=+30.77
 cycles:    23132, Stack depth:5
 SIN(298.0000000000)==-8.82947594e-01, AbsErr: +1.06845632e-09, RelBits=+29.62
 cycles:    23332, Stack depth:5
@@ -2644,7 +2644,7 @@ SIN(349.0000000000)==-1.90808999e-01, AbsErr: +3.16070520e-09, RelBits=+25.85
 cycles:    23333, Stack depth:5
 SIN(350.0000000000)==-1.73648182e-01, AbsErr: +4.17012083e-09, RelBits=+25.31
 cycles:    23130, Stack depth:5
-SIN(351.0000000000)==-1.56434467e-01, AbsErr: +2.31316130e-09, RelBits=+26.01
+SIN(351.0000000000)==-1.56434467e-01, AbsErr: +2.31316127e-09, RelBits=+26.01
 cycles:    23201, Stack depth:5
 SIN(352.0000000000)==-1.39173101e-01, AbsErr: +4.40890630e-10, RelBits=+28.23
 cycles:    23575, Stack depth:5

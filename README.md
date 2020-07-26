@@ -156,22 +156,22 @@ ___
   * atof.asm atof.h     - atof - ascii to float conversion 
   * atoi.asm atoi.h     - atoi - ascii to integer conversion 
   * bcd32.asm bcd32.h   - 32bit binary to decimal conversions
-  *fp.asm fp.h          - Floating point core
-  *fpfn.asm fpfn.h      - Trig,Log,Exp functions
-  *fpsup.asm fpsup.h    - Floating point extras
-  *ftoa.asm ftoa.h      - FTOA floating to ascii
-  *io.asm io.h          - Debug output for simulator PSIM
-  *macro.h              - PIC Macros
-  *math.h               - EQU defines of floating point consants
-  *math_tab.h           - Floating point constants for math functions
-  *mem.h                - Memory move code
-  *mkdocs               - Extract documentation for source files (hack)
-  *picfp.asm            - Floating point test MAIN
-  *sourceforge.txt      - Discription of initial sourceforge project picfloat
-  *stack.h              - work in progress stack functions
-  *table0.h             - Table load code for math_tab.h
-  *table.h              - General table load code
-  *tablesup.h           - Table load macros for math functions and support
+  * fp.asm fp.h          - Floating point core
+  * fpfn.asm fpfn.h      - Trig,Log,Exp functions
+  * fpsup.asm fpsup.h    - Floating point extras
+  * ftoa.asm ftoa.h      - FTOA floating to ascii
+  * io.asm io.h          - Debug output for simulator PSIM
+  * macro.h              - PIC Macros
+  * math.h               - EQU defines of floating point consants
+  * math_tab.h           - Floating point constants for math functions
+  * mem.h                - Memory move code
+  * mkdocs               - Extract documentation for source files (hack)
+  * picfp.asm            - Floating point test MAIN
+  * sourceforge.txt      - Discription of initial sourceforge project picfloat
+  * stack.h              - work in progress stack functions
+  * table0.h             - Table load code for math_tab.h
+  * table.h              - General table load code
+  * tablesup.h           - Table load macros for math functions and support
 
 ## Directories:
   * ./utils             - Utilities to make floating point constants
